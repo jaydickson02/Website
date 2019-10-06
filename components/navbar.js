@@ -24,7 +24,7 @@ export default function ButtonAppBar(props) { //Pass fixed or static to props
 
   return (
     <div className={classes.root}>
-      <AppBar position={props.type} className={classes.appBar} color="default">
+      <AppBar position={props.type} color="default">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Jay Dickson
