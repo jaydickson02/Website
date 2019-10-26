@@ -12,18 +12,19 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     root: {
       padding: theme.spacing(10, 2),
-      margin: "16px"
+      
     },
   }));
 
 let postSummary = (props) => {
-
-    let content = props.content;
     const classes = useStyles();
 
+    let content = props.content;
+    
 
     return(
-        <div >
+        <div>
+            
             <Paper className={classes.root}>
                 <Typography variant="h1" align="center" gutterBottom>
                     <Link href="blogpost">
