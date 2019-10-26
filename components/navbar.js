@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 
 //Next
 import Link from 'next/link';
@@ -22,11 +23,29 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  pad: {
+    padding: theme.spacing(6,1)
+  },
+  navButtons: {
+    margin: '16px'
+  }
   
 }));
 
 export default function ButtonAppBar(props) { //Pass fixed or static to props
   const classes = useStyles();
+  let projectsColour = 'inherit'
+  let blogColour = 'inherit'
+
+  switch(props.page) {
+    case 0:
+      projectsColour = 'Primary'
+      break;
+    case 1:
+      blogColour = 'primary'
+      break;
+  }
+
 
   return (
     <div className={classes.root}>
@@ -41,13 +60,17 @@ export default function ButtonAppBar(props) { //Pass fixed or static to props
             </Button>
           </Link>
           </Typography>
-          
-            <Link href="/blog">
-              <Button color="inherit">Blog</Button>
-            </Link>
+
+          <Link href="/projects">
+            <Button color={projectsColour}>Projects</Button>
+          </Link>
+          <Link href="/blog">
+            <Button color={blogColour}>Blog</Button>
+          </Link>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+    <Box className={classes.pad}></Box>
     </div>
   );
 }
