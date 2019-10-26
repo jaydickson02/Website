@@ -19,7 +19,7 @@ class TextAnimation extends React.Component {
     componentDidMount() {
       this.intervalID = setInterval(
         () => this.add(),
-        2500
+        1500
       );
     }
 
