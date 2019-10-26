@@ -93,6 +93,16 @@ return(
             </Typography>
             </Grid>
 
+            <Grid item xs={12}>	
+                <Paper className={classes.root}>	
+                    <Typography variant='h1' align='center' gutterBottom>	
+                        Developing	
+                    </Typography>	
+                </Paper>	
+            </Grid>
+
+            
+
         </Grid>
         </Box>
         
