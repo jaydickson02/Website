@@ -4,7 +4,7 @@
 
 let blogpost = (props) => {
 
-    content = props.content;
+    //content = props.content;
 
     return(
         <div>
