@@ -67,7 +67,9 @@ export default function ButtonAppBar(props) { //Pass fixed or static to props
           <Link href="/blog">
             <Button color={blogColour}>Blog</Button>
           </Link>
+          <Link href="/login">
           <Button color="inherit">Login</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     <Box className={classes.pad}></Box>
