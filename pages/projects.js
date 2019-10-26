@@ -8,14 +8,14 @@ import Box from '@material-ui/core/Box';
 //Components
 import Navbar from "../components/navbar"
 import Head from "../components/head"
+import Card from "../components/card"
 
 //Next
 import Link from 'next/link'
 
 const useStyles = makeStyles(theme => ({
     root: {
-      padding: theme.spacing(20, 2),
-      margin: "16px"
+      padding: theme.spacing(2, 0),
     },
     wrapper:{
         height: '100vh'
@@ -33,11 +33,13 @@ let projects = () => {
 
             <Grid container alignItems='center' spacing={0}>
                 <Grid item xs={12}>
-                    <Typography variant='h1' align='Center' className={classes.root}>
-                        Under Construction!
+                    
+                    <Typography variant='h3' align='Center' className={classes.root}>
+                        <Card />
                     </Typography>
+                    
                 </Grid>
-
+                
             </Grid>
 
         </div>
