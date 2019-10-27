@@ -18,9 +18,24 @@ const useStyles = makeStyles(theme => ({
     root: {
       padding: theme.spacing(2, 0),
     },
-    wrapper:{
+
+    wrapper: {
         height: '100vh'
     },
+
+   CardStyle: {
+       //margin: theme.spacing(2,2),
+        padding: theme.spacing(2, 0),
+       /* marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 0,
+        marginBottom: 0,
+        width: '345px',*/
+    },
+
+    wrapper: {
+        textAlign: 'center'
+    }
   }));
 
 let projects = () => {
@@ -32,13 +47,31 @@ let projects = () => {
             <Head />
             <Navbar page={0}/>
 
-            <Grid container alignItems='center' spacing={0}>
-                <Grid item xs={4}>
+            <Grid 
+                container
+                spacing={0}
+                direction="row"
+                alignItems="center"
+                justify="center">
+
+                <Grid item sm={12} lg={4} md={6}>
+                    <Box className={classes.wrapper}>
+                    <div display='blockInline' className={classes.CardStyle}>
                     <CardSnake />
+                    </div>
+                    </Box>
                 </Grid>
 
-                <Grid item xs={4}>
+                <Grid item sm={12} lg={4} md={6}>
+                    <Box display='blockInline' className={classes.CardStyle}>
                     <CardMaze />
+                    </Box>
+                </Grid>
+
+                <Grid item sm={12} lg={4} md={6}>
+                    <Box display='blockInline' className={classes.CardStyle}>
+                    <CardMaze />
+                    </Box>
                 </Grid>
 
             </Grid>
