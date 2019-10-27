@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 
 //Analytics
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 class test extends React.Component{
 

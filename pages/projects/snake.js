@@ -10,7 +10,7 @@ import sketch from '../../p5Sketches/P5Snake'
 import Typography from '@material-ui/core/Typography';
 
 //Analytics
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 class test extends React.Component{
 

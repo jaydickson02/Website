@@ -45,28 +45,28 @@ let projects = () => {
                 alignItems="center"
                 justify="center">
 
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
 
