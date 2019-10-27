@@ -5,7 +5,13 @@ import Paper from '@material-ui/core/Paper';
 //Components
 import PostBoard from "../components/blog/postBoard"
 import Navbar from "../components/navbar"
+import Meta from '../components/headSEO'
+
 //Next
+
+
+//Analytics
+import Layout from '../components/layout'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -14,14 +20,18 @@ const useStyles = makeStyles(theme => ({
   }));
 
 let blog = () => {
-
+    
     const classes = useStyles();
 
     return(
-        <div>
-            <Navbar page={1}/>
-            <PostBoard />
-        </div>
+        <Layout>
+            <div>
+            <Meta title={'Blog | Jay Dickson'} 
+            desc={"Programming, Science and whatever else I feel like writing about. Find it all here."}/>
+                <Navbar page={1}/>
+                <PostBoard />
+            </div>
+        </Layout>
     )
 }
 
