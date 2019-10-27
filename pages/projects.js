@@ -8,7 +8,8 @@ import Box from '@material-ui/core/Box';
 //Components
 import Navbar from "../components/navbar"
 import Head from "../components/head"
-import Card from "../components/card"
+import CardSnake from "../components/projects/cardSnake"
+import CardMaze from "../components/projects/cardMaze"
 
 //Next
 import Link from 'next/link'
@@ -17,9 +18,7 @@ const useStyles = makeStyles(theme => ({
     root: {
       padding: theme.spacing(2, 0),
     },
-    wrapper:{
-        height: '100vh'
-    },
+
   }));
 
 let projects = () => {
@@ -31,17 +30,39 @@ let projects = () => {
             <Head />
             <Navbar page={0}/>
 
-            <Grid container alignItems='center' spacing={0}>
-                <Grid item xs={12}>
-                    
-                    <Typography variant='h3' align='Center' className={classes.root}>
-                        <Card />
-                    </Typography>
-                    
-                </Grid>
-                
-            </Grid>
+            <Grid 
+                container
+                spacing={0}
+                direction="row"
+                alignItems="center"
+                justify="center">
 
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
+                </Grid>
+
+            </Grid>
         </div>
     )
 }

@@ -24,7 +24,7 @@ let postBoard = () => {
     return(
 
         <div>
-            <Grid container  alignItems="center" spacing={4}>
+            <Grid container  alignItems="center" spacing={0}>
                 {posts}
             </Grid>
         </div>
