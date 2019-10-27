@@ -13,6 +13,7 @@ const Meta = (props) => (
 <meta name="twitter:description" content={props.desc} />
 <meta name="twitter:site" content="" />
 <meta name="twitter:creator" content="" />
+<meta name="google-site-verification" content="BnJCVThscfVZi_SClgqmTK3TMue9M5bYDVs2hoMK_vA" />
 <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
 <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
 <link rel="stylesheet" href="" />
