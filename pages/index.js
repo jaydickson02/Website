@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Components
 import Navbar from "../components/navbar"
-import Head from "../components/head"
 import TextAnimation from "../components/animations/textAnimation"
 import Meta from '../components/headSEO'
 
