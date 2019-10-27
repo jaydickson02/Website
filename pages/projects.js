@@ -8,7 +8,8 @@ import Box from '@material-ui/core/Box';
 //Components
 import Navbar from "../components/navbar"
 import Head from "../components/head"
-import Card from "../components/card"
+import CardSnake from "../components/projects/cardSnake"
+import CardMaze from "../components/projects/cardMaze"
 
 //Next
 import Link from 'next/link'
@@ -32,16 +33,15 @@ let projects = () => {
             <Navbar page={0}/>
 
             <Grid container alignItems='center' spacing={0}>
-                <Grid item xs={12}>
-                    
-                    <Typography variant='h3' align='Center' className={classes.root}>
-                        <Card />
-                    </Typography>
-                    
+                <Grid item xs={4}>
+                    <CardSnake />
                 </Grid>
-                
-            </Grid>
 
+                <Grid item xs={4}>
+                    <CardMaze />
+                </Grid>
+
+            </Grid>
         </div>
     )
 }

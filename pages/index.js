@@ -7,10 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 //Components
 import Navbar from "../components/navbar"
 import Head from "../components/head"
-import Drawer from "../components/drawer"
-import Social from "../components/socialDisplay"
-import Clock from "../components/clock"
-import TextAnimation from "../components/textAnimation"
+import TextAnimation from "../components/animations/textAnimation"
 
 //Material
 import Paper from '@material-ui/core/Paper';
@@ -51,60 +48,55 @@ return(
     <div>
         <Head />
         <Box className={classes.wrapper}>
-        <Navbar />
+            <Navbar />
 
-        <Grid container alignItems="center" spacing={1}>
-            <Grid item xs={12}>
-                <Box className={classes.headPlate}>
-                        <Typography variant='h1' align='center' gutterBottom>
-                            Jay Dickson
-                        </Typography>
-                        <Typography variant='h5' align='center' gutterBottom>
-                            Developing with
-                        </Typography>
-                        <Typography variant='h3' align='center' gutterBottom>
-                           <b><TextAnimation /></b>
-                        </Typography>
-                        <Typography variant='h6' align='center' gutterBottom>
-                            Check out my projects!
-                        </Typography>
-                        
-                        
+            <Grid container alignItems="center" spacing={0}>
+                <Grid item xs={12}>
+                    <Box className={classes.headPlate}>
+                            <Typography variant='h1' align='center' gutterBottom>
+                                Jay Dickson
+                            </Typography>
+                            <Typography variant='h5' align='center' gutterBottom>
+                                Developing with
+                            </Typography>
+                            <Typography variant='h3' align='center' gutterBottom>
+                            <b><TextAnimation /></b>
+                            </Typography>
+                            <Typography variant='h6' align='center' gutterBottom>
+                                Check out my projects!
+                            </Typography> 
+                    </Box>
+                </Grid>
 
-                        
-                </Box>
+                <Grid item xs={12}>
+                    <Typography variant='h1' align='center' gutterBottom>
+                        <Box component="span" className={classes.socialPadding}>
+                            <a href='http://github.com/jaydickson02'>
+                                <img src="/socialLogos/GitHub-Mark-120px-plus.png" width="64px" height="64px"/>
+                            </a> 
+                        </Box>
+                        <Box component="span" className={classes.socialPadding}>
+                            <a href='https://twitter.com/Jaymonkey01'>
+                                <img src="/socialLogos/Twitter_Logo_Blue.png" width="64px" height="64px"/>
+                            </a>
+                        </Box>
+                    </Typography>
+                </Grid>
+                
+
             </Grid>
 
-            <Grid item xs={12}>
-            <Typography variant='h1' align='center' gutterBottom>
-                <Box component="span" className={classes.socialPadding}>
-                
-                        <a href='http://github.com/jaydickson02'>
-                            <img src="/socialLogos/GitHub-Mark-120px-plus.png" width="64px" height="64px"/>
-                        </a>
-                    
-                </Box>
-                
-                <Box component="span" className={classes.socialPadding}>
-                        <a href='https://twitter.com/Jaymonkey01'>
-                            <img src="/socialLogos/Twitter_Logo_Blue.png" width="64px" height="64px"/>
-                        </a>
-                </Box>
-            </Typography>
-            </Grid>
+        </Box>
 
+        <Grid container alignItem="center" spacing={0}>
             <Grid item xs={12}>	
                 <Paper className={classes.root}>	
                     <Typography variant='h1' align='center' gutterBottom>	
                         Developing	
-                    </Typography>	
+                    </Typography>
                 </Paper>	
             </Grid>
-
-            
-
         </Grid>
-        </Box>
         
     </div>
 )
