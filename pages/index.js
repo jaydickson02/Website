@@ -87,16 +87,6 @@ return(
             </Grid>
 
         </Box>
-
-        <Grid container alignItem="center" spacing={0}>
-            <Grid item xs={12}>	
-                <Paper className={classes.root}>	
-                    <Typography variant='h1' align='center' gutterBottom>	
-                        Developing	
-                    </Typography>
-                </Paper>	
-            </Grid>
-        </Grid>
         
     </div>
 )
