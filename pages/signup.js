@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Meta from '../components/headSEO'
 
 function Copyright() {
   return (
@@ -55,7 +56,12 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
+
+    
+    
     <Container component="main" maxWidth="xs">
+      <Meta title='Signin | Jay Dickson' 
+        desc="Signin page"/>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>

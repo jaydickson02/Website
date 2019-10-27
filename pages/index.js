@@ -49,8 +49,8 @@ let index = () => {
 return(
     <Layout>
     <div>
-        <Meta title={'Jay Dickson'} 
-            desc={"Location of all things Jay Dickson related. Enjoy your stay!"}/>
+        <Meta title='Jay Dickson'
+            desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
 
         <Box className={classes.wrapper}>
             <Navbar />

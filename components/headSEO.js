@@ -1,8 +1,8 @@
 import Head from 'next/head'
 const Meta = (props) => (      
 <Head>
-<title></title>
-<meta name="description" content="" />
+<title>{props.title}</title>
+<meta name="description" content="{props.desc}" />
 <meta property="og:type" content="website" />
 <meta name="og:title" property="og:title" content="" />
 <meta name="og:description" property="og:description" content="" />
@@ -25,4 +25,5 @@ const Meta = (props) => (
 
 </Head>
 )
+
 export default Meta
