@@ -19,7 +19,7 @@ class resizeNavName extends React.Component {
     componentDidMount() {
         if(isMobileDevice()){
             this.setState({
-                name: 'Jay'
+                name: 'Home'
               });
         }
     }
