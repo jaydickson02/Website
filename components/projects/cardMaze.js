@@ -9,11 +9,17 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link'
 import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme =>({
-  card: {
-    maxWidth: 345
-  },
+  padding: {
+    marginTop: 16,
+    marginBottom: 16,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+   height: '250px',
+   width: '345px'
+  }
 }));
 
 export default function ImgMediaCard() {
@@ -21,7 +27,7 @@ export default function ImgMediaCard() {
 
   return (
     <div>
-    <Card className={classes.card}>
+    <Paper className={classes.padding}>
         <Link href="/projects/maze">
       <CardActionArea>
         <CardMedia
@@ -42,7 +48,8 @@ export default function ImgMediaCard() {
       </CardActionArea>
       </Link>
      
-    </Card>
+    
+    </Paper>
     </div>
   );
 }

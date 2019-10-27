@@ -19,23 +19,6 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(2, 0),
     },
 
-    wrapper: {
-        height: '100vh'
-    },
-
-   CardStyle: {
-       //margin: theme.spacing(2,2),
-        padding: theme.spacing(2, 0),
-       /* marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: 0,
-        marginBottom: 0,
-        width: '345px',*/
-    },
-
-    wrapper: {
-        textAlign: 'center'
-    }
   }));
 
 let projects = () => {
@@ -54,24 +37,29 @@ let projects = () => {
                 alignItems="center"
                 justify="center">
 
-                <Grid item sm={12} lg={4} md={6}>
-                    <Box className={classes.wrapper}>
-                    <div display='blockInline' className={classes.CardStyle}>
+                <Grid item sm={12} lg={3} md={6}>
                     <CardSnake />
-                    </div>
-                    </Box>
                 </Grid>
-
-                <Grid item sm={12} lg={4} md={6}>
-                    <Box display='blockInline' className={classes.CardStyle}>
+                <Grid item sm={12} lg={3} md={6}>
                     <CardMaze />
-                    </Box>
                 </Grid>
-
-                <Grid item sm={12} lg={4} md={6}>
-                    <Box display='blockInline' className={classes.CardStyle}>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
                     <CardMaze />
-                    </Box>
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardSnake />
+                </Grid>
+                <Grid item sm={12} lg={3} md={6}>
+                    <CardMaze />
                 </Grid>
 
             </Grid>
