@@ -11,6 +11,9 @@ import Box from '@material-ui/core/Box';
 //Next
 import Link from 'next/link';
 
+//Components
+import NavName from '../components/resizeNavName'
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,14 +35,16 @@ const useStyles = makeStyles(theme => ({
   
 }));
 
+
 export default function ButtonAppBar(props) { //Pass fixed or static to props
   const classes = useStyles();
+  
   let projectsColour = 'inherit'
   let blogColour = 'inherit'
 
   switch(props.page) {
     case 0:
-      projectsColour = 'Primary'
+      projectsColour = 'primary'
       break;
     case 1:
       blogColour = 'primary'
@@ -54,8 +59,8 @@ export default function ButtonAppBar(props) { //Pass fixed or static to props
         <Typography variant="h6" className={classes.title}>
           <Link href="/">
             <Button>
-              <Typography variant="h6" className={classes.title}>
-                Jay Dickson
+              <Typography variant={'h6'} className={classes.title}>
+                <NavName />
               </Typography>
             </Button>
           </Link>
