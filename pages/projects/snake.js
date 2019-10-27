@@ -3,7 +3,7 @@ import React from 'react';
 
 //Components
 import Navbar from "../../components/navbar"
-import {loadableP5 as P5Wrapper} from '../../components/loadableP5'
+import {loadableP5 as P5Wrapper} from '../../components/projects/loadableP5'
 import sketch from '../../p5Sketches/P5Snake'
 
 //Material
@@ -28,4 +28,4 @@ class test extends React.Component{
     }
 }
 
-export default test
+export default test;
