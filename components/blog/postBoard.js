@@ -14,8 +14,10 @@ let testData = [
 
 
 let postBoard = (props) => {
+    console.log(props.posts);
     let posts;
-    if(props.data.length > 1){ 
+    if(props.posts.length > 0){
+        console.log('hey') 
         posts = props.data.map(blog => 
     <Grid item xs={12}> 
         <PostSummary content = {blog.title} /> 
@@ -35,14 +37,13 @@ let postBoard = (props) => {
     )
 }
 
+postBoard.getInitialProps = async () => {
+    const res = await fetch('http://db.originalone.cloud/api/answers/all');
+    const data = await res.json();
+
+  return{posts: data};
+}
+
 export default postBoard;
 
 
-postBoard.getInitialProps = async function() {
-    const res = await fetch('http://db.originalone.cloud/api/blog/all');
-    const data = await res.json();
-
-  console.log(`Show data fetched. Count: ${data.length}`);
-
-  return(data);
-}
