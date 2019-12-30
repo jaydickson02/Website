@@ -15,7 +15,7 @@ let testData = [
 
 let postBoard = (props) => {
     let posts;
-    if(props.data){ 
+    if(props.data.length > 1){ 
         posts = props.data.map(blog => 
     <Grid item xs={12}> 
         <PostSummary content = {blog.title} /> 
