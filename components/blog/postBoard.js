@@ -13,11 +13,11 @@ let testData = [
 ]
 
 
-let postBoard = () => {
+let postBoard = (props) => {
 
-    let posts = testData.map(x => 
+    let posts = props.data.map(x => 
     <Grid item xs={12}> 
-        <PostSummary content = {x} /> 
+        <PostSummary content = {x.title} /> 
     </Grid>
     )
 
@@ -32,3 +32,13 @@ let postBoard = () => {
 }
 
 export default postBoard;
+
+
+postBoard.getInitialProps = async function() {
+    const res = await fetch('http://db.originalone.cloud/api/blog/all');
+    const data = await res.json();
+
+  console.log(`Show data fetched. Count: ${data.length}`);
+
+  return (data);
+}
