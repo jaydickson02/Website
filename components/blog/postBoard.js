@@ -14,12 +14,16 @@ let testData = [
 
 
 let postBoard = (props) => {
-
-    let posts = props.data.map(blog => 
+    let posts;
+    if(props.data){ 
+        posts = props.data.map(blog => 
     <Grid item xs={12}> 
         <PostSummary content = {blog.title} /> 
     </Grid>
     )
+    } else {
+        posts = "No Blog Posts Found";
+    }
 
     return(
 
@@ -40,5 +44,5 @@ postBoard.getInitialProps = async function() {
 
   console.log(`Show data fetched. Count: ${data.length}`);
 
-  return (data);
+  return(data);
 }
