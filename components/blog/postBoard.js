@@ -15,9 +15,9 @@ let testData = [
 
 let postBoard = (props) => {
 
-    let posts = props.data.map(x => 
+    let posts = props.data.map(blog => 
     <Grid item xs={12}> 
-        <PostSummary content = {x.title} /> 
+        <PostSummary content = {blog.title} /> 
     </Grid>
     )
 
