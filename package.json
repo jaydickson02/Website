@@ -16,6 +16,7 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-ga": "^2.7.0",
     "react-p5-wrapper": "^2.0.0"
   },
   "scripts": {

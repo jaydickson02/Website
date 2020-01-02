@@ -7,12 +7,15 @@ import Box from '@material-ui/core/Box';
 
 //Components
 import Navbar from "../components/navbar"
-import Head from "../components/head"
 import CardSnake from "../components/projects/cardSnake"
 import CardMaze from "../components/projects/cardMaze"
+import Meta from '../components/headSEO'
 
 //Next
 import Link from 'next/link'
+
+//Analytics
+import Layout from '../components/layout'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -23,11 +26,16 @@ const useStyles = makeStyles(theme => ({
 
 let projects = () => {
 
+    
+
     const classes = useStyles();
 
     return(
+        <Layout>
+        
         <div>
-            <Head />
+            <Meta title={'Projects | Jay Dickson'} 
+            desc={"Check out some of the projects and work I have done as a independant developer."}/>
             <Navbar page={0}/>
 
             <Grid 
@@ -37,33 +45,34 @@ let projects = () => {
                 alignItems="center"
                 justify="center">
 
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardSnake />
                 </Grid>
-                <Grid item sm={12} lg={3} md={6}>
+                <Grid item sm={12} lg={3} md={6} xl={2}>
                     <CardMaze />
                 </Grid>
 
             </Grid>
         </div>
+        </Layout>
     )
 }
 

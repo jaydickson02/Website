@@ -6,15 +6,16 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Components
 import Navbar from "../components/navbar"
-import Head from "../components/head"
 import TextAnimation from "../components/animations/textAnimation"
+import Meta from '../components/headSEO'
 
 //Material
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-
+//Analytics
+import Layout from '../components/layout'
 
 //Next
 import Link from 'next/link';
@@ -45,8 +46,11 @@ let index = () => {
     
 
 return(
+    <Layout>
     <div>
-        <Head />
+        <Meta title='Jay Dickson'
+            desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
+
         <Box className={classes.wrapper}>
             <Navbar />
 
@@ -89,6 +93,7 @@ return(
         </Box>
         
     </div>
+    </Layout>
 )
 }
 
