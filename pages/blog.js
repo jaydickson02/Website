@@ -29,7 +29,7 @@ let blog = (props) => {
 
 
 blog.getInitialProps = async () => {
-    const res = await fetch('http://db.originalone.cloud/api/blog/all');
+    const res = await fetch('https://db.originalone.cloud/api/blog/all');
     const data = await res.json();
 
   return{posts: data};
