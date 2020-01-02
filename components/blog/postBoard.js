@@ -4,22 +4,18 @@ import PostSummary from "./postSummary"
 //Material
 import Grid from '@material-ui/core/Grid';
 
-let testData = [
-
-    {title: "How to code", body: "This is how you code. Its basically magic.", author: "Jay Dickson"},
-    {title: "Why are you here?", body: "Probably something to do with teleportation?", author: "Billy Topnotch"},
-    {title: "Pretty fly for a white guy", body: "But is he pretty white for a fly guy?", author: "Ben Farland"}
-
-]
 
 
-let postBoard = () => {
+let postBoard = (props) => {
+    
+    let posts = props.posts.map
 
-    let posts = testData.map(x => 
-    <Grid item xs={12}> 
-        <PostSummary content = {x} /> 
+    (post => 
+     <Grid key={post.title} item xs={12}> 
+        <PostSummary content = {post} /> 
     </Grid>
     )
+    
 
     return(
 
@@ -32,3 +28,5 @@ let postBoard = () => {
 }
 
 export default postBoard;
+
+

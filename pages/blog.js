@@ -5,9 +5,11 @@ import Paper from '@material-ui/core/Paper';
 //Components
 import PostBoard from "../components/blog/postBoard"
 import Navbar from "../components/navbar"
+
 import Meta from '../components/headSEO'
 
 //Next
+import fetch from 'isomorphic-unfetch';
 
 
 //Analytics
@@ -19,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
+
 let blog = () => {
     
     const classes = useStyles();
@@ -29,10 +32,18 @@ let blog = () => {
             <Meta title={'Blog | Jay Dickson'} 
             desc={"Programming, Science and whatever else I feel like writing about. Find it all here."}/>
                 <Navbar page={1}/>
-                <PostBoard />
+                <PostBoard posts = {props.posts}/>
             </div>
         </Layout>
     )
+}
+
+
+blog.getInitialProps = async () => {
+    const res = await fetch('https://db.originalone.cloud/api/blog/all');
+    const data = await res.json();
+
+  return{posts: data};
 }
 
 
