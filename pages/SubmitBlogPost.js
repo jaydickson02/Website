@@ -7,7 +7,7 @@ let SubmitBlogPost = () => {
     <div>
     <Navbar />
     <h1>New Blog Post</h1>
-        <form action="http://db.originalone.cloud/api/blog/add" method="post">
+        <form action="https://db.originalone.cloud/api/blog/add" method="post">
             <label>Post Title</label>
             <input name="title" type="text"></input>
 

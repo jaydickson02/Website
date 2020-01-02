@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }));
 
 
-let blog = () => {
+let blog = (props) => {
     
     const classes = useStyles();
 
