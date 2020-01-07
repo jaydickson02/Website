@@ -5,13 +5,14 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { Hidden } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles(theme => ({
     root: {
         margin: theme.spacing(2,4),
-        height: '300px',
+        height: '340px',
         overflow: 'hidden'
     },
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     image: {
         objectFit: 'cover',
         objectPosition: 'center',
-        height: '300px',
+        height: '340px',
     },
 
     imageContainer: {
@@ -48,6 +49,19 @@ const useStyles = makeStyles(theme => ({
 let blogSummary = (props) => {
 
     const classes = useStyles();
+    const theme = useTheme();
+    const large = useMediaQuery(theme.breakpoints.up('sm'));
+    const small = useMediaQuery(theme.breakpoints.down('sm'))
+    
+    let headingSize;
+
+    if(small){
+        headingSize = 'h6'
+    } else if(large) {
+        headingSize = 'h4';
+    } else {
+        headingSize = 'h5';
+    }
 
     let content = props.content;
 
@@ -74,7 +88,7 @@ let blogSummary = (props) => {
 
                 <Grid item xs={9} >
                     <div className={classes.text}>
-                        <Typography variant="h4" align="center" gutterBottom>
+                        <Typography variant={headingSize} align="center" gutterBottom>
                                     {content.data.title}
                         </Typography>
 
