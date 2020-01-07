@@ -1,5 +1,5 @@
 import matter from 'gray-matter'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import BlogList from '../components/blogList'
 import Navbar from "../components/navbar"
 import Meta from '../components/headSEO'

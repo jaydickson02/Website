@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
 //Components
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout'
 import Navbar from '../../components/navbar'
 
 
