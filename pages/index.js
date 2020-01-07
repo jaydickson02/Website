@@ -55,8 +55,6 @@ let index = () => {
 
     const theme = useTheme();
     const xtraSmall = useMediaQuery(theme.breakpoints.down('xs'))
-
-    let vh = window.innerHeight * 0.01;
     
     let headingSize = 'h1';
     let label = 'h5';
