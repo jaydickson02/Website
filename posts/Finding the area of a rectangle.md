@@ -4,6 +4,7 @@ author: Jay Dickson
 date: 2020-01-07
 hero_image: /blogImages/math.png
 description: 'The formula and explanation on finding the area of a rectangle'
+Category: 'Math'
 ---
 
 # Area of a rectangle
