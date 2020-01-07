@@ -40,6 +40,12 @@ const useStyles = makeStyles(theme => ({
     },
     socialPadding: {
         padding: theme.spacing(0, 2)
+    },
+
+    noScroll: {
+        margin: 0,
+        height: '100%',
+        overflow: 'hidden',
     }
   }));
 
@@ -49,6 +55,8 @@ let index = () => {
 
     const theme = useTheme();
     const xtraSmall = useMediaQuery(theme.breakpoints.down('xs'))
+
+    let vh = window.innerHeight * 0.01;
     
     let headingSize = 'h1';
     let label = 'h5';
@@ -66,6 +74,8 @@ let index = () => {
 return(
     <Layout>
     <div>
+        <html className={classes.noScroll}>
+        <body className={classes.noScroll}>
         <Meta title='Jay Dickson'
             desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
 
@@ -109,7 +119,8 @@ return(
             </Grid>
 
         </Box>
-        
+        </body>
+        </html>
     </div>
     </Layout>
 )
