@@ -1,8 +1,13 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+
+//Components
 import Layout from '../../components/Layout'
+import Navbar from '../../components/navbar'
+
 
 export default function BlogTemplate(props) {
+
   // data from getInitialProps
   const markdownBody = props.content
   const frontmatter = props.data
@@ -14,6 +19,8 @@ export default function BlogTemplate(props) {
   
   return (
     <Layout>
+    <Navbar page={1}/>
+    
     <article className="blog">
         <figure className="blog__hero">
         <img
@@ -28,28 +35,36 @@ export default function BlogTemplate(props) {
         <div className="blog__body">
         <ReactMarkdown source={markdownBody} />
         </div>
-        <h2 className="blog__footer">
-        Written By: {frontmatter.author}
-        </h2>
+        <h3 className="blog__footer">
+        Author: {frontmatter.author}
+        </h3>
     </article>
     <style jsx>
       {`
+        .blog_body img {
+          object-position: center;
+          max-width:100%;
+          max-height:100%;
+        }
+
         .blog h1 {
           margin-bottom: .7rem;
         }
         
         .blog__hero {
-          min-height: 300px;
-          height: 60vh;
-          width: 100%;
+          height: 40vh;
+          width: 95%;
           margin: 0;
           overflow: hidden;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
         }
         .blog__hero img {
           margin-bottom: 0;
           object-fit: cover;
-          min-height: 100%;
-          min-width: 100%;
+          min-width:100%;
+          max-height:100%;
           object-position: center;
         }
         
@@ -73,6 +88,7 @@ export default function BlogTemplate(props) {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          overflow: hidden;
         }
         .blog__body a {
           padding-bottom: 1.5rem;

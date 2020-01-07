@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import BlogSummary from '../components/blogSummary'
 
 let blogList = (props) => {
     console.log(props.allBlogs)
-    let posts = props.allBlogs.map(post => 
-    <Link key ={post.document.data.title} href={`/blog/${post.document.data.title}`}>
-        <a>{post.document.data.title}</a>
-    </Link>);
+    //TODO: Sort by date. Date can be accessed at post.document.data.date
     
+    let posts = props.allBlogs.map(post => 
+        <BlogSummary key ={post.document.data.title} content = {post.document}/>
+    );
     
     return(
         <div>

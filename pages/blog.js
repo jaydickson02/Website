@@ -1,5 +1,4 @@
 import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import BlogList from '../components/blogList'
 import Navbar from "../components/navbar"
@@ -10,7 +9,7 @@ import Meta from '../components/headSEO'
       <Layout>
          <Meta title={'Blog | Jay Dickson'} 
             desc={"Programming, Science and whatever else I feel like writing about. Find it all here."}/>
-                <Navbar page={1}/>
+        <Navbar page={1}/>
         <section>
           <BlogList allBlogs={props.allBlogs} />
         </section>
