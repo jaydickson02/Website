@@ -35,7 +35,8 @@ const useStyles = makeStyles(theme => ({
     },
     wrapper:{
         height: '100vh',
-        backgroundImage: "url('/backgrounds/dot-grid.png')"
+        backgroundImage: "url('/backgrounds/dot-grid.png')",
+        overflow: 'hidden'
     },
     socialPadding: {
         padding: theme.spacing(0, 2)
