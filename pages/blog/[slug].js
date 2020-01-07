@@ -52,7 +52,7 @@ export default function BlogTemplate(props) {
         }
         
         .blog__hero {
-          height: 40vh;
+          height: 30vh;
           width: 95%;
           margin: 0;
           overflow: hidden;
@@ -150,8 +150,8 @@ export default function BlogTemplate(props) {
             margin-bottom: 1.5rem;
           }
           .blog__hero {
-            min-height: 600px;
-            height: 75vh;
+            min-height: 200px;
+            height: 25vh;
           }
           .blog__info {
             text-align: center;
@@ -168,7 +168,7 @@ export default function BlogTemplate(props) {
         
         @media (min-width: 1440px) {
           .blog__hero {
-            height: 70vh;
+            height: 50vh;
           }
           .blog__info {
             padding: 3rem 0;

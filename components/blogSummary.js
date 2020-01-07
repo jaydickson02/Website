@@ -51,15 +51,15 @@ let blogSummary = (props) => {
     const classes = useStyles();
     const theme = useTheme();
     const large = useMediaQuery(theme.breakpoints.up('sm'));
-    const small = useMediaQuery(theme.breakpoints.down('sm'))
+    const xtraSmall = useMediaQuery(theme.breakpoints.down('sm'))
     
     let headingSize;
 
-    if(small){
+    if(xtraSmall){
         headingSize = 'h6'
     } else if(large) {
         headingSize = 'h4';
-    } else {
+    } else { //small
         headingSize = 'h5';
     }
 

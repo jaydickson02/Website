@@ -3,6 +3,8 @@ import React from 'react';
 //Material UI Components
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //Components
 import Navbar from "../components/navbar"
@@ -43,6 +45,21 @@ const useStyles = makeStyles(theme => ({
 
 let index = () => {
     const classes = useStyles()
+
+    const theme = useTheme();
+    const xtraSmall = useMediaQuery(theme.breakpoints.down('xs'))
+    
+    let headingSize = 'h1';
+    let label = 'h5';
+    let animation = 'h3';
+    let tag = 'h6';
+
+    if(xtraSmall){ //Xtra small
+        headingSize = 'h3'
+        label = 'h6'
+        animation = 'h4'
+        tag = 'h6'
+    }
     
 
 return(
@@ -52,21 +69,21 @@ return(
             desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
 
         <Box className={classes.wrapper}>
-            <Navbar />
+            <Navbar page={2}/>
 
             <Grid container alignItems="center" spacing={0}>
                 <Grid item xs={12}>
                     <Box className={classes.headPlate}>
-                            <Typography variant='h1' align='center' gutterBottom>
+                            <Typography variant={headingSize} align='center' gutterBottom>
                                 Jay Dickson
                             </Typography>
-                            <Typography variant='h5' align='center' gutterBottom>
+                            <Typography variant={label} align='center' gutterBottom>
                                 Developing with
                             </Typography>
-                            <Typography variant='h3' align='center' gutterBottom>
+                            <Typography variant={animation} align='center' gutterBottom>
                             <b><TextAnimation /></b>
                             </Typography>
-                            <Typography variant='h6' align='center' gutterBottom>
+                            <Typography variant={tag} align='center' gutterBottom>
                                 Check out my projects!
                             </Typography> 
                     </Box>
