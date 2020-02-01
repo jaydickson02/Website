@@ -1,5 +1,5 @@
 ---
-title: "The Big Bang. What happened?"
+title: "The Big Bang"
 author: Jay Dickson
 date: 2020-02-1
 hero_image: /blogImages/astronomy.jpg
