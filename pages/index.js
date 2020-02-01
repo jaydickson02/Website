@@ -42,11 +42,6 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(0, 2)
     },
 
-    noScroll: {
-        margin: 0,
-        height: '100%',
-        overflow: 'hidden',
-    }
   }));
 
 
@@ -70,10 +65,9 @@ let index = () => {
     
 
 return(
-    <Layout>
+    
     <div>
-        <html className={classes.noScroll}>
-        <body className={classes.noScroll}>
+        <Layout>
         <Meta title='Jay Dickson'
             desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
 
@@ -117,10 +111,8 @@ return(
             </Grid>
 
         </Box>
-        </body>
-        </html>
+        </Layout>
     </div>
-    </Layout>
 )
 }
 
