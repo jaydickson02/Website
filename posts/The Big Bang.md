@@ -13,7 +13,9 @@ What was there before the earth? Was it perhaps just a dark, quiet void of nothi
 
 ## What caused the Big Bang?
 
-No one knows. Their are theories but these are all constrained by the simple fact that we have no idea what mechanics are at work outside of our universe. Its impossible to comprehend **nothing**. But that is what our universe resides in. Nothing. Existance itself is null and void outside of the universe so the effort to workout what might have kickstarted the Big Bang may be a fruitless endeavour. So instead let focus on what we do know.
+No one knows. There are theories but these are all constrained by the simple fact that we have no idea what mechanics are at work outside of our universe. Its impossible to comprehend **nothing**. But that is what our universe resides in. Nothing. Existance itself is null and void outside of the universe so the effort to workout what might have kickstarted the Big Bang may be a fruitless endeavour. So instead let focus on what we do know.
+
+![Test](/blogImages/astronomy.jpg)
 
 ## What happened just after the Big Bang?
 
