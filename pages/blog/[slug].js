@@ -42,9 +42,8 @@ export default function BlogTemplate(props) {
     <style jsx>
       {`
         .blog_body img {
-          object-position: center;
-          max-width:100%;
-          max-height:100%;
+          max-width: 100%;
+          display: block; 
         }
 
         .blog h1 {
