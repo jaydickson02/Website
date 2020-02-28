@@ -41,11 +41,6 @@ export default function BlogTemplate(props) {
     </article>
     <style jsx>
       {`
-        .blog__body img {
-          max-width: 100%;
-          display: block; 
-        }
-
         .blog h1 {
           margin-bottom: .7rem;
         }
@@ -59,6 +54,7 @@ export default function BlogTemplate(props) {
           margin-left: auto;
           margin-right: auto;
         }
+        
         .blog__hero img {
           margin-bottom: 0;
           object-fit: cover;
@@ -89,6 +85,14 @@ export default function BlogTemplate(props) {
           justify-content: center;
           overflow: hidden;
         }
+
+        .blog__body img {
+          max-width: 100%;
+          display: block; 
+          margin-left: auto;
+          margin-right: auto;
+        }
+
         .blog__body a {
           padding-bottom: 1.5rem;
         }
@@ -179,6 +183,14 @@ export default function BlogTemplate(props) {
       `}
       
     </style>
+    `}<style jsx global>{`
+        .blog__body img {
+          max-width: 100%;
+          display: block; 
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `}</style>
   </Layout>
   )
 }
