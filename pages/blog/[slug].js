@@ -41,7 +41,7 @@ export default function BlogTemplate(props) {
     </article>
     <style jsx>
       {`
-        .blog_body img {
+        .blog__body img {
           max-width: 100%;
           display: block; 
         }
