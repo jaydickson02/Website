@@ -1,4 +1,4 @@
-iimport { Container, Alert, Jumbotron, Button } from 'react-bootstrap'
+import { Container, Alert, Jumbotron, Button } from 'react-bootstrap'
 import Layout from '../shared/layout'
 
 const index = (props) => {
