@@ -1,23 +1,52 @@
 import { Container, Alert, Jumbotron, Button } from 'react-bootstrap'
 import Layout from '../shared/layout'
+import React from "react";
 
-const index = (props) => {
-    console.log(props)
-return(
-<Layout activeLink={'/'}>
-    <Container>
+class index extends React.Component {
+    constructor(props) {
+      super(props)
+      this.myRef = React.createRef()
+    }
 
-    <hr />
+    Sketch = (p) => {
 
-        <Alert variant={'primary'}>
-            This is the landing page for Jay's Website. Welcome. We're currently under construction. Feel free to have a look around!
-        </Alert>
+        p.setup = () => {
+         p.createCanvas(window.innerWidth - 15, window.innerHeight - 15);
+        }
+    
+        p.draw = () => {
+         p.background(220);
+         p.rect(50,50,80,80);
+        }
+    
+       p.windowResized = () => {
+         p.resizeCanvas(window.innerWidth - 15, window.innerHeight - 15);
+       }
+     }
+    
+    componentDidMount() {
+        const p5 = require("p5")
+        this.myP5 = new p5(this.Sketch, this.myRef.current)
+     }
 
-    <hr />
-        
-    </Container>
-</Layout>
-)
+    render() {
+        return (
+
+    <Layout activeLink={'/'}>
+        <Container ref={this.myRef}>
+
+        <hr />
+
+            <Alert variant={'primary'}>
+                This is the landing page for Jay's Website. Welcome. We're currently under construction. Feel free to have a look around!
+            </Alert>
+
+        <hr />
+            
+        </Container>
+    </Layout>
+        )
+    }
 }
 
 export default index
