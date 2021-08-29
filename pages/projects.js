@@ -15,7 +15,7 @@ return(
     <Row>
         <Col>
     
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '100%' , height: '240px'}}>
             <Card.Body>
                 <Card.Title>TeaTime</Card.Title>
                 <Card.Text>
@@ -24,12 +24,14 @@ return(
                 <Button variant="primary" target="_blank" href="https://tea-time.vercel.app/">Go</Button>
             </Card.Body>
             </Card>
+            <hr />
 
         </Col>
 
+
         <Col>
 
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '100%', height: '240px' }}>
             <Card.Body>
                 <Card.Title>Race Day</Card.Title>
                 <Card.Text>
@@ -38,12 +40,13 @@ return(
                 <Button variant="primary" target="_blank" href="https://race-day.vercel.app/">Go</Button>
             </Card.Body>
             </Card>
+            <hr />
 
         </Col>
 
         <Col>
 
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '100%', height: '240px' }}>
             <Card.Body>
                 <Card.Title>Maze</Card.Title>
                 <Card.Text>
@@ -52,7 +55,7 @@ return(
                 <Button variant="primary" target="_blank" href="https://maze-woad.vercel.app/">Go</Button>
             </Card.Body>
             </Card>
-
+            <hr />
         </Col>
         
     </Row>
