@@ -13,7 +13,7 @@ return(
 
     <Container>
     <Row>
-        <Col>
+        <Col sm={12} lg={4}>
     
             <Card style={{ width: '100%' , height: '240px'}}>
             <Card.Body>
@@ -29,7 +29,7 @@ return(
         </Col>
 
 
-        <Col>
+        <Col sm={12} lg={4}>
 
             <Card style={{ width: '100%', height: '240px' }}>
             <Card.Body>
@@ -44,7 +44,7 @@ return(
 
         </Col>
 
-        <Col>
+        <Col sm={12} lg={4}>
 
             <Card style={{ width: '100%', height: '240px' }}>
             <Card.Body>
