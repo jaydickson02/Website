@@ -2,6 +2,7 @@ import { Container, Alert, Jumbotron, Button, Row, Col } from 'react-bootstrap'
 import Layout from '../shared/layout'
 import React from "react";
 import MovingComponent from 'react-moving-text'
+import Image from 'next/image'
 
 class index extends React.Component {
     constructor(props) {
@@ -39,16 +40,6 @@ class index extends React.Component {
     <Layout activeLink={'/'}>
       
         <Container>
-        <Row>
-        <hr />
-
-            <Alert variant={'primary'}>
-                This is the landing page for Jay's Website. Welcome. We're currently under construction. Feel free to have a look around!
-            </Alert>
-
-        <hr />
-
-        </Row>
 
         <Row>
           <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
@@ -60,7 +51,7 @@ class index extends React.Component {
                   'Hello!',
                   "I'm Jay.",
                   "This is my site.",
-                  "Thanks for visiting.",
+                  "Nice of you to visit.",
                   'That. Is. All.',
                   'Bye!'
                 ]} />
@@ -72,8 +63,33 @@ class index extends React.Component {
         
         </Row>
 
-        
+        <Row>
+          <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
 
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://twitter.com/rubbergoldfsh">
+          <Image  src="/twitterIcon.png" alt="twitter" width="48" height="48"/>
+          </a>
+          </span>
+
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://www.instagram.com/jaydickson02/">
+          <Image  src="/instagramIcon.png" alt="instagram" width="48" height="48"/>
+          </a>
+          </span>
+
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://github.com/jaydickson02">
+          <Image  src="/githubIcon.png" alt="github" width="48" height="48"/>
+          </a>
+          </span>
+          
+        </span>
+
+        
+        </Row>
+
+        
             
         </Container>
     </Layout>
