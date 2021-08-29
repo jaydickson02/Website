@@ -54,7 +54,7 @@ class index extends React.Component {
           <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
 
           
-            <h1 style={{fontSize: '80px'}}>
+            <h1 style={{fontSize: '4vw'}}>
                 <MovingComponent type="typewriter"
                   dataText={[
                   'Hello!',
