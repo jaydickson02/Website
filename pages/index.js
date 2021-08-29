@@ -8,7 +8,7 @@ class index extends React.Component {
       this.myRef = React.createRef()
     }
 
-    Sketch = (p) => {
+   /*  Sketch = (p) => {
 
         p.setup = () => {
          p.createCanvas(window.innerWidth - 15, window.innerHeight - 15);
@@ -22,18 +22,22 @@ class index extends React.Component {
        p.windowResized = () => {
          p.resizeCanvas(window.innerWidth - 15, window.innerHeight - 15);
        }
-     }
+     } */
     
-    componentDidMount() {
+   /*  componentDidMount() {
         const p5 = require("p5")
         this.myP5 = new p5(this.Sketch, this.myRef.current)
-     }
+
+
+        <Container ref={this.myRef}> This line needs to go under layout
+     } */
 
     render() {
         return (
 
     <Layout activeLink={'/'}>
-        <Container ref={this.myRef}>
+      
+        <Container>
 
         <hr />
 
