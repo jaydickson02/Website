@@ -1,34 +1,20 @@
 {
-  "name": "nextjs",
-  "version": "4.0.0",
-  "dependencies": {
-    "@loadable/babel-plugin": "^5.10.3",
-    "@loadable/component": "^5.10.3",
-    "@loadable/server": "^5.10.3",
-    "@loadable/webpack-plugin": "^5.7.1",
-    "@material-ui/core": "latest",
-    "@material-ui/icons": "^4.2.1",
-    "@material-ui/styles": "latest",
-    "@tinacms/git-client": "^0.4.1",
-    "clsx": "latest",
-    "gray-matter": "^4.0.2",
-    "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.24.0",
-    "next": "latest",
-    "p5": "^0.10.2",
-    "prop-types": "latest",
-    "raw-loader": "^4.0.0",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-ga": "^2.7.0",
-    "react-markdown": "^4.3.0",
-    "react-p5-wrapper": "^2.0.0",
-    "styled-components": "^4.4.1",
-    "tinacms": "^0.11.0"
-  },
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "next": "^11.1.0",
+    "p5": "^1.4.0",
+    "react": "17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "17.0.1",
+    "react-gist": "^1.2.2",
+    "react-moving-text": "^0.0.7"
   }
 }

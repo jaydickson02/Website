@@ -1,121 +1,100 @@
-import React from 'react';
+import { Container, Alert, Jumbotron, Button, Row, Col } from 'react-bootstrap'
+import Layout from '../shared/layout'
+import React from "react";
+import MovingComponent from 'react-moving-text'
+import Image from 'next/image'
 
-//Material UI Components
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-
-//Components
-import Navbar from "../components/navbar"
-import TextAnimation from "../components/animations/textAnimation"
-import Meta from '../components/headSEO'
-
-//Material
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-
-//Analytics
-import Layout from '../components/layout'
-
-//Next
-import Link from 'next/link';
-
-//let intro = ["Never forget to import fun!", "Hello world! Welcome visitors from foreign lands. This place is a real mismatch of stuff right now. Its definitly a work in progress. Feel free to explore the place. Most things won't bite!"]
-
-const useStyles = makeStyles(theme => ({
-    root: {
-      padding: theme.spacing(20, 2),
-      
-    },
-    headPlate: {
-        padding: theme.spacing(8, 2)
-        
-    },
-    wrapper:{
-        height: '100vh',
-        backgroundImage: "url('/backgrounds/dot-grid.png')",
-        overflow: 'hidden'
-    },
-    socialPadding: {
-        padding: theme.spacing(0, 2)
-    },
-
-  }));
-
-
-let index = () => {
-    const classes = useStyles()
-
-    const theme = useTheme();
-    const xtraSmall = useMediaQuery(theme.breakpoints.down('xs'))
-    
-    let headingSize = 'h1';
-    let label = 'h5';
-    let animation = 'h3';
-    let tag = 'h6';
-
-    if(xtraSmall){ //Xtra small
-        headingSize = 'h3'
-        label = 'h6'
-        animation = 'h4'
-        tag = 'h6'
+class index extends React.Component {
+    constructor(props) {
+      super(props)
+      this.myRef = React.createRef()
     }
+
+   /*  Sketch = (p) => {
+
+        p.setup = () => {
+         p.createCanvas(window.innerWidth - 15, window.innerHeight - 15);
+        }
     
-
-return(
+        p.draw = () => {
+         p.background(220);
+         p.rect(50,50,80,80);
+        }
     
-    <div>
-        <Layout>
-        <Meta title='Jay Dickson'
-            desc="Location of all things Jay Dickson related. Enjoy your stay!"/>
+       p.windowResized = () => {
+         p.resizeCanvas(window.innerWidth - 15, window.innerHeight - 15);
+       }
+     } */
+    
+   /*  componentDidMount() {
+        const p5 = require("p5")
+        this.myP5 = new p5(this.Sketch, this.myRef.current)
 
-        <Box className={classes.wrapper}>
-            <Navbar page={2}/>
 
-            <Grid container alignItems="center" spacing={0}>
-                <Grid item xs={12}>
-                    <Box className={classes.headPlate}>
-                            <Typography variant={headingSize} align='center' gutterBottom>
-                                Jay Dickson
-                            </Typography>
-                            <Typography variant={label} align='center' gutterBottom>
-                                Developing with
-                            </Typography>
-                            <Typography variant={animation} align='center' gutterBottom>
-                            <b><TextAnimation /></b>
-                            </Typography>
-                            <Typography variant={tag} align='center' gutterBottom>
-                                Check out my projects!
-                            </Typography> 
-                    </Box>
-                </Grid>
+        <Container ref={this.myRef}> This line needs to go under layout
+     } */
 
-                <Grid item xs={12}>
-                    <Typography variant='h1' align='center' gutterBottom>
-                        <Box component="span" className={classes.socialPadding}>
-                            <a href='http://github.com/jaydickson02'>
-                                <img src="/socialLogos/GitHub-Mark-120px-plus.png" width="64px" height="64px"/>
-                            </a> 
-                        </Box>
-                        <Box component="span" className={classes.socialPadding}>
-                            <a href='https://twitter.com/Jaymonkey01'>
-                                <img src="/socialLogos/Twitter_Logo_Blue.png" width="64px" height="64px"/>
-                            </a>
-                        </Box>
-                    </Typography>
-                </Grid>
-                
+    render() {
+        return (
 
-            </Grid>
+    <Layout activeLink={'/'}>
+      
+        <Container>
 
-        </Box>
-        </Layout>
-    </div>
-)
+        <Row>
+          <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
+
+          
+            <h1 style={{fontSize: '4vw'}}>
+                <MovingComponent type="typewriter"
+                  dataText={[
+                  'Hello!',
+                  "I'm Jay.",
+                  "This is my site.",
+                  "Nice of you to visit.",
+                  'That. Is. All.',
+                  'Bye!'
+                ]} />
+          </h1>
+
+          <hr />
+        </span>
+
+        
+        </Row>
+
+        <Row>
+          <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
+
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://twitter.com/rubbergoldfsh">
+          <Image  src="/twitterIcon.png" alt="twitter" width="48" height="48"/>
+          </a>
+          </span>
+
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://www.instagram.com/jaydickson02/">
+          <Image  src="/instagramIcon.png" alt="instagram" width="48" height="48"/>
+          </a>
+          </span>
+
+          <span style={{padding: '10px'}}>
+          <a target="_blank" href="https://github.com/jaydickson02">
+          <Image  src="/githubIcon.png" alt="github" width="48" height="48"/>
+          </a>
+          </span>
+          
+        </span>
+
+        
+        </Row>
+
+        
+            
+        </Container>
+    </Layout>
+        )
+    }
 }
 
-
-
-export default index;
+export default index

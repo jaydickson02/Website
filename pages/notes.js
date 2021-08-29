@@ -1,7 +1,7 @@
 import { Container, Alert, Row, Col } from 'react-bootstrap'
 import Layout from '../shared/layout'
 
-const login = () => {
+const notes = () => {
 
     return(
 
@@ -24,4 +24,4 @@ const login = () => {
     )
 }
 
-export default login
+export default notes

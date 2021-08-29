@@ -1,80 +1,70 @@
-//Material UI Components
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 
-//Components
-import Navbar from "../components/navbar"
-import CardSnake from "../components/projects/cardSnake"
-import CardMaze from "../components/projects/cardMaze"
-import Meta from '../components/headSEO'
+import { Card, Button, Container, Row, Col } from 'react-bootstrap'
+import Layout from '../shared/layout'
+import Gist from 'react-gist'
 
-//Next
-import Link from 'next/link'
+const projects =() => {
 
-//Analytics
-import Layout from '../components/layout'
+//<Gist id='19eeef42d77c1807215b23700356f6fc'/> this goes in return statement
 
-const useStyles = makeStyles(theme => ({
-    root: {
-      padding: theme.spacing(2, 0),
-    },
+return(
 
-  }));
+    <Layout activeLink={'/projects'}>
 
-let projects = () => {
-
+    <Container>
+    <Row>
+        <Col sm={12} lg={4}>
     
+            <Card style={{ width: '100%' , height: '240px'}}>
+            <Card.Body>
+                <Card.Title>TeaTime</Card.Title>
+                <Card.Text>
+                Countdown to your next cup of tea! Set your preffered interval between cups and wait. Never miss a warm cup of tea again!
+                </Card.Text>
+                <Button variant="primary" target="_blank" href="https://tea-time.vercel.app/">Go</Button>
+            </Card.Body>
+            </Card>
+            <hr />
 
-    const classes = useStyles();
+        </Col>
 
-    return(
-        <Layout>
+
+        <Col sm={12} lg={4}>
+
+            <Card style={{ width: '100%', height: '240px' }}>
+            <Card.Body>
+                <Card.Title>Race Day</Card.Title>
+                <Card.Text>
+                Always miss the MotoGP or just really like counting the seconds untill the next race? This is for you. Complete with dramatic quotes and energetic music.
+                </Card.Text>
+                <Button variant="primary" target="_blank" href="https://race-day.vercel.app/">Go</Button>
+            </Card.Body>
+            </Card>
+            <hr />
+
+        </Col>
+
+        <Col sm={12} lg={4}>
+
+            <Card style={{ width: '100%', height: '240px' }}>
+            <Card.Body>
+                <Card.Title>Maze</Card.Title>
+                <Card.Text>
+                An automatically generating maze built in P5.js based upon Prims Algorithm. Nothing fancy. But pretty cool to watch.
+                </Card.Text>
+                <Button variant="primary" target="_blank" href="https://maze-woad.vercel.app/">Go</Button>
+            </Card.Body>
+            </Card>
+            <hr />
+        </Col>
         
-        <div>
-            <Meta title={'Projects | Jay Dickson'} 
-            desc={"Check out some of the projects and work I have done as a independant developer."}/>
-            <Navbar page={0}/>
+    </Row>
+    </Container>
+        
+        
+    </Layout>
+)
 
-            <Grid 
-                container
-                spacing={0}
-                direction="row"
-                alignItems="center"
-                justify="center">
-
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardSnake />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardMaze />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardSnake />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardMaze />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardSnake />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardMaze />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardSnake />
-                </Grid>
-                <Grid item sm={12} lg={3} md={6} xl={2}>
-                    <CardMaze />
-                </Grid>
-
-            </Grid>
-        </div>
-        </Layout>
-    )
 }
-
 
 export default projects;
