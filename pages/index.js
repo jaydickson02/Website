@@ -1,6 +1,7 @@
-import { Container, Alert, Jumbotron, Button } from 'react-bootstrap'
+import { Container, Alert, Jumbotron, Button, Row, Col } from 'react-bootstrap'
 import Layout from '../shared/layout'
 import React from "react";
+import MovingComponent from 'react-moving-text'
 
 class index extends React.Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class index extends React.Component {
     <Layout activeLink={'/'}>
       
         <Container>
-
+        <Row>
         <hr />
 
             <Alert variant={'primary'}>
@@ -46,6 +47,33 @@ class index extends React.Component {
             </Alert>
 
         <hr />
+
+        </Row>
+
+        <Row>
+          <span style={{width: '100%', marginTop: '10%',textAlign: 'center'}}>
+
+          
+            <h1 style={{fontSize: '80px'}}>
+                <MovingComponent type="typewriter"
+                  dataText={[
+                  'Hello!',
+                  "I'm Jay.",
+                  "This is my site.",
+                  "Thanks for visiting.",
+                  'That. Is. All.',
+                  'Bye!'
+                ]} />
+          </h1>
+
+          <hr />
+        </span>
+
+        
+        </Row>
+
+        
+
             
         </Container>
     </Layout>
