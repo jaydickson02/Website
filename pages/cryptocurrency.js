@@ -5,7 +5,7 @@ const cryptocurrency = () => {
 
 return(
 
-    <Layout>
+    <Layout activeLink={'/cryptocurrency'}>
 
     
 

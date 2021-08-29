@@ -9,7 +9,7 @@ const projects =() => {
 
 return(
 
-    <Layout>
+    <Layout activeLink={'/projects'}>
 
     <Container>
     <Row>
