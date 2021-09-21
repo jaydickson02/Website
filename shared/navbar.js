@@ -16,7 +16,6 @@ let navbar = (props) => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-auto"  activeKey={props.activeLink}>
             <Nav.Link href="/projects">Projects</Nav.Link>
-            <Nav.Link href="/cryptocurrency">Cryptocurrency</Nav.Link>
             <Nav.Link href="/notes">Notes</Nav.Link>
 
         </Nav>
