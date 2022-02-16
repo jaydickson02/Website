@@ -49,15 +49,13 @@ class index extends React.Component {
                 <MovingComponent type="typewriter"
                   dataText={[
                   'Hello!',
-                  "I'm Jay.",
-                  "This is my site.",
-                  "Nice of you to visit.",
-                  'That. Is. All.',
-                  'Bye!'
+                  "This is just another website"
                 ]} />
           </h1>
 
           <hr />
+          
+          <p>Hi! I'm Jay. Developing projects and just a general fasination for technology is pretty prevelant in my life. The intention is that this site will be a place to showcase such work/play. Thanks for visting.</p>
         </span>
 
         
