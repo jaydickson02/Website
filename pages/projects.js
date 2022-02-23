@@ -21,7 +21,7 @@ return(
                 <Card.Text>
                 Countdown to your next cup of tea! Set your preffered interval between cups and wait. Never miss a warm cup of tea again!
                 </Card.Text>
-                <Button variant="primary" target="_blank" href="https://tea-time.vercel.app/">Go</Button>
+                <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/TeaTime/">Go</Button>
             </Card.Body>
             </Card>
             <hr />
@@ -37,7 +37,7 @@ return(
                 <Card.Text>
                 Always miss the MotoGP or just really like counting the seconds untill the next race? This is for you. Complete with dramatic quotes and energetic music.
                 </Card.Text>
-                <Button variant="primary" target="_blank" href="https://race-day.vercel.app/">Go</Button>
+                <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/RaceDay/">Go</Button>
             </Card.Body>
             </Card>
             <hr />
@@ -52,7 +52,7 @@ return(
                 <Card.Text>
                 An automatically generating maze built in P5.js based upon Prims Algorithm. Nothing fancy. But pretty cool to watch.
                 </Card.Text>
-                <Button variant="primary" target="_blank" href="https://maze-woad.vercel.app/">Go</Button>
+                <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/Maze/">Go</Button>
             </Card.Body>
             </Card>
             <hr />
