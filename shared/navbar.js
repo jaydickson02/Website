@@ -8,20 +8,46 @@ import Container from 'react-bootstrap/Container'
 
 let navbar = (props) => {
 
+    let styles = {
+        paddingTop: '22px', 
+        paddingBottom:'22px'
+    }
+
+    if(props.colour){
+        return(
+            
+            <Navbar varient="dark" expand="sm" style={styles}>
+            <Navbar.Brand style={{color: props.colour}} href="/">Jay Dickson</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+            <Nav className="mr-auto"  activeKey={props.activeLink}>
+                <Nav.Link style={{color: props.colour}} href="/projects">Projects</Nav.Link>
+                <Nav.Link style={{color: props.colour}} href="/notes">Notes</Nav.Link>
+    
+            </Nav>
+              <Nav className="justify-content-end"  activeKey={props.activeLink}>
+                <Nav.Link style={{color: props.colour}} href="/about">About</Nav.Link>
+                <Nav.Link style={{color: props.colour}} href="/login">Login</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          
+        )
+    }
     return(
-        
-        <Navbar varient="light" expand="sm" style={{paddingTop: '22px', paddingBottom:'22px'}}>
+
+        <Navbar varient="dark" expand="sm" style={styles}>
         <Navbar.Brand href="/">Jay Dickson</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-auto"  activeKey={props.activeLink}>
-            <Nav.Link href="/projects">Projects</Nav.Link>
-            <Nav.Link href="/notes">Notes</Nav.Link>
+            <Nav.Link  href="/projects">Projects</Nav.Link>
+            <Nav.Link  href="/notes">Notes</Nav.Link>
 
         </Nav>
           <Nav className="justify-content-end"  activeKey={props.activeLink}>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link  href="/about">About</Nav.Link>
+            <Nav.Link  href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -1,11 +1,11 @@
 
 import Navbar from 'react-bootstrap/Navbar'
 
-let footer = () => {
+let footer = (props) => {
 
     return(
-    <Navbar bg='light' sticky='bottom' className="justify-content-center" style={{marginTop:'15px'}}>
-            <Navbar.Text>
+    <Navbar sticky='bottom' className="justify-content-center" style={{marginTop:'5px'}}>
+            <Navbar.Text style={{color: props.colour}}>
             © 2020. Built by Jay Dickson.
             </Navbar.Text>
     </Navbar>
