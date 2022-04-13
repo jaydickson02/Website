@@ -26,19 +26,19 @@ const about = () => {
 
           <span style={{padding: '10px'}}>
           <a target="_blank" href="https://twitter.com/rubbergoldfsh">
-          <Image src={"/sm/twitterIcon-" + iconColour + ".png"} alt="twitter" width="32" height="32"/> 
+          <Image src={"/SM/twitterIcon-" + iconColour + ".png"} alt="twitter" width="32" height="32"/> 
           </a>
           </span>
 
           <span style={{padding: '10px'}}>
           <a target="_blank" href="https://www.instagram.com/jaydickson02/">
-          <Image src={"/sm/instagramIcon-" + iconColour + ".png"} alt="instagram" width="32" height="32"/>
+          <Image src={"/SM/instagramIcon-" + iconColour + ".png"} alt="instagram" width="32" height="32"/>
           </a>
           </span>
 
           <span style={{padding: '10px'}}>
           <a target="_blank" href="https://github.com/jaydickson02">
-          <Image src={"/sm/githubIcon-" + iconColour + ".png"} alt="github" width="32" height="32"/>
+          <Image src={"/SM/githubIcon-" + iconColour + ".png"} alt="github" width="32" height="32"/>
           </a>
           </span>
           
