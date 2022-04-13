@@ -35,11 +35,12 @@ let layout = (props) => {
         return(
             <div style={styles}>
                 <Head />
-                <Container style={{minHeight: '92vh', position: 'relative'}}>
+                <Container style={{minHeight: '100vh', position: 'relative'}}>
                 <Navbar colour= {props.colour} activeLink={props.activeLink}/>
                 {props.children}
+                <Footer render={props.footer} colour = {props.colour}/>
                 </Container>
-                <Footer colour = {props.colour}/>
+                
             </div>
         )
     }
@@ -47,11 +48,12 @@ let layout = (props) => {
     return(
         <div>
             <Head />
-            <Container style={{minHeight: '92vh', position: 'relative'}}>
+            <Container style={{minHeight: '100vh', position: 'relative'}}>
             <Navbar activeLink={props.activeLink}/>
             {props.children}
-            </Container>
             <Footer />
+            </Container>
+            
         </div>
     )
 }
