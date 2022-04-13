@@ -50,7 +50,7 @@ class index extends React.Component {
 
         //Check for a cookie, make one if none exist
         if(!checkCookies('darkmode')){ 
-            setCookies('darkmode', 'light', {expires: 30})
+            setCookies('darkmode', 'light')
         }
 
         //Set darkmode based on cookie before page load
