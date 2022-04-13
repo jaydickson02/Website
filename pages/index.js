@@ -94,7 +94,7 @@ class index extends React.Component {
         <hr style={{backgroundColor: this.state.themeColour, margin: 0, marginLeft: 22, marginRight: 22}} />
 
         <Row>
-            <Col xs={6} sm={6} lg={6} style={{width: '100%', marginTop: '0%', padding: '22px', textAlign: 'left'}}>
+            <Col xs={8} sm={8} lg={6} style={{width: '100%', marginTop: '0%', padding: '22px', textAlign: 'left'}}>
           <span >
             
           <span style={{padding: '10px'}}>
@@ -117,7 +117,7 @@ class index extends React.Component {
           
         </span>
             </Col>
-            <Col xs={6} sm={6} lg={6} style={{width: '100%', marginTop: '0%', padding: '22px'}}>
+            <Col xs={4} sm={4} lg={6} style={{width: '100%', marginTop: '0%', padding: '22px'}}>
                 <div style={{display: 'flex', alignItems: 'right', justifyContent: 'right'}}>
                 <Switch 
                 checked={this.state.check}
