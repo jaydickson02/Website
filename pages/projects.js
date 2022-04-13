@@ -74,7 +74,7 @@ return(
                 <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/TeaTime/">Go</Button>
             </Card.Body>
             </Card>
-            
+            <hr style={{backgroundColor: themeColour, margin: 22}}/>
         </Col>
 
 
@@ -89,7 +89,7 @@ return(
                 <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/RaceDay/">Go</Button>
             </Card.Body>
             </Card>
-
+            <hr style={{backgroundColor: themeColour, margin: 22}}/>
         </Col>
 
         <Col sm={12} lg={4}>
@@ -103,7 +103,7 @@ return(
                 <Button variant="primary" target="_blank" href="https://jaydickson02.github.io/Maze/">Go</Button>
             </Card.Body>
             </Card>
-           
+            <hr style={{backgroundColor: themeColour, margin: 22}}/>
         </Col>
         
     </Row>
