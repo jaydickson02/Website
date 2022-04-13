@@ -5,7 +5,7 @@ const login = () => {
 
     return(
 
-    <Layout activeLink={'/notes'}>
+    <Layout activeLink={'/login'}>
       
         <Container>
         <Row>
