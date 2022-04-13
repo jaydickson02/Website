@@ -89,7 +89,7 @@ class index extends React.Component {
 
         return (
 
-        <Layout bg={this.state.bgPic} background='true' colour={this.state.themeColour} activeLink={'/'}>
+        <Layout footer='false' bg={this.state.bgPic} background='true' colour={this.state.themeColour} activeLink={'/'}>
     
         <hr style={{backgroundColor: this.state.themeColour, margin: 0, marginLeft: 22, marginRight: 22}} />
 
