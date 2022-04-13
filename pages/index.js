@@ -1,4 +1,4 @@
-import { Container, Alert, Jumbotron, Button, Row, Col } from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import Layout from '../shared/layout'
 import React from "react";
 import Image from 'next/image'
