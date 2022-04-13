@@ -6,6 +6,9 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 
+import { faBars, faRocket } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 let navbar = (props) => {
 
     let styles = {
@@ -17,8 +20,8 @@ let navbar = (props) => {
         return(
             
             <Navbar varient="dark" expand="sm" style={styles}>
-            <Navbar.Brand style={{color: props.colour}} href="/">Jay Dickson</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Brand style={{color: props.colour}} href="/"><FontAwesomeIcon style={{color: props.colour, paddingRight: 8, paddingLeft: 10}} icon={faRocket} />Jay Dickson </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" ><FontAwesomeIcon style={{color: props.colour}} icon={faBars}/></Navbar.Toggle>
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
             <Nav className="mr-auto"  activeKey={props.activeLink}>
                 <Nav.Link style={{color: props.colour}} href="/projects">Projects</Nav.Link>
