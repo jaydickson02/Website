@@ -12,26 +12,26 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
 let layout = (props) => {
-    
 
-    if(props.structure == false){
-        return(
+
+    if (props.structure == false) {
+        return (
             <div>
                 <Head />
                 <Container>
-                <Navbar activeLink={props.activeLink}/>
+                    <Navbar activeLink={props.activeLink} />
                 </Container>
                 {props.children}
                 <Footer />
             </div>
-            )
-    } else if (props.background == 'true'){ //Different styles and text colours for page with bg
+        )
+    } else if (props.background == 'true') { //Different styles and text colours for page with bg
 
-        if(!props.colour){
+        if (!props.colour) {
             props.colour = 'black'
         }
 
-        let styles ={
+        let styles = {
             backgroundImage: "url(/bg/webp/" + props.bg + ".webp)", //Location to update background image
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top center',
@@ -39,28 +39,28 @@ let layout = (props) => {
             color: props.colour
         }
 
-        return(
+        return (
             <div style={styles}>
                 <Head />
-                <Container style={{minHeight: '100vh', position: 'relative'}}>
-                <Navbar colour= {props.colour} activeLink={props.activeLink}/>
-                {props.children}
-                <Footer render={props.footer} colour = {props.colour}/>
+                <Container style={{ minHeight: '100vh', position: 'relative' }}>
+                    <Navbar colour={props.colour} activeLink={props.activeLink} />
+                    {props.children}
+                    <Footer render={props.footer} colour={props.colour} />
                 </Container>
-                
+
             </div>
         )
     }
 
-    return(
+    return (
         <div>
             <Head />
-            <Container style={{minHeight: '100vh', position: 'relative'}}>
-            <Navbar activeLink={props.activeLink}/>
-            {props.children}
-            <Footer />
+            <Container style={{ minHeight: '100vh', position: 'relative' }}>
+                <Navbar activeLink={props.activeLink} />
+                {props.children}
+                <Footer />
             </Container>
-            
+
         </div>
     )
 }
