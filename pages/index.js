@@ -6,9 +6,6 @@ import Switch from '@mui/material/Switch'
 import { checkCookies, getCookie, setCookies, removeCookies } from 'cookies-next';
 
 
-
-
-
 class index extends React.Component {
     constructor(props) {
         super(props)

@@ -27,6 +27,7 @@ let layout = (props) => {
         )
     } else if (props.background == 'true') { //Different styles and text colours for page with bg
 
+
         if (!props.colour) {
             props.colour = 'black'
         }

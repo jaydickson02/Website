@@ -1,26 +1,42 @@
 import { Container, Alert, Row, Col } from 'react-bootstrap'
 import Layout from '../shared/layout'
 
+
 const login = () => {
 
-    return(
+    return (
 
-    <Layout activeLink={'/login'}>
-      
-        <Container>
-        <Row>
-        <hr />
+        <Layout activeLink={'/login'}>
 
-            <Alert variant={'primary'}>
-                Welcome. We're currently under construction. Feel free to have a look around!
-            </Alert>
+            <Container>
+                <Row>
+                    {/*White Sign in form using bootstrap*/}
+                    {<Col xs={12} md={6} lg={4} style={{ margin: 'auto', marginTop: '10%', marginBottom: '10%' }}>
 
-        <hr />
+                        {/* Sign in form blend into background with small shadow*/}
+                        <Alert variant="secondary" style={{ boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)' }}>
 
-        </Row>
-        </Container>
-    </Layout>
-    
+                            <Alert.Heading>Sign In</Alert.Heading>
+                            <hr />
+                            <form>
+                                <label>
+                                    <input type="text" name="email" placeholder="Email" />
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="password" name="password" placeholder="Password" />
+                                </label>
+                                <br />
+                                <input type="button" value="Log In" />
+                            </form>
+                        </Alert>
+                        <Alert.Link href="/forgotpassword">Forgot Password?</Alert.Link>
+                    </Col>}
+                </Row>
+
+            </Container>
+        </Layout >
+
     )
 }
 
