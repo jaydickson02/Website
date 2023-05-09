@@ -25,33 +25,7 @@ let layout = (props) => {
                 <Footer />
             </div>
         )
-    } else if (props.background == 'true') { //Different styles and text colours for page with bg
-
-
-        if (!props.colour) {
-            props.colour = 'black'
-        }
-
-        let styles = {
-            backgroundImage: "url(/bg/webp/" + props.bg + ".webp)", //Location to update background image
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top center',
-            backgroundSize: 'cover',
-            color: props.colour
-        }
-
-        return (
-            <div style={styles}>
-                <Head />
-                <Container style={{ minHeight: '100vh', position: 'relative' }}>
-                    <Navbar colour={props.colour} activeLink={props.activeLink} />
-                    {props.children}
-                    <Footer render={props.footer} colour={props.colour} />
-                </Container>
-
-            </div>
-        )
-    }
+        } else {
 
     return (
         <div>
@@ -59,11 +33,12 @@ let layout = (props) => {
             <Container style={{ minHeight: '100vh', position: 'relative' }}>
                 <Navbar activeLink={props.activeLink} />
                 {props.children}
-                <Footer />
+                <Footer render={props.footer}/>
             </Container>
 
         </div>
     )
 }
 
+}
 export default layout;
