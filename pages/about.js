@@ -18,25 +18,7 @@ const about = () => {
 
             <Image class="ProfileImage" src={"/jay-dickson.webp"} alt="Profile" width="1440px" height="1800px" />
             
-            <div class="AboutIcons">
-            <span class="icons" style={{width: '100%', marginTop: '0%', padding: '22px', textAlign: 'left'}}>
-
-                <span style={{ padding: '10px' }}>
-                    <a target="_blank" href="https://twitter.com/rubbergoldfsh">
-                        <Image class="autoFilter" src={"/Icons/twitter.svg"} alt="twitter"
-                            width="22" height="22"/>
-                    </a>
-                </span>
-
-                <span style={{ padding: '10px' }}>
-                    <a target="_blank" href="https://github.com/jaydickson02">
-                        <Image class="autoFilter" src={"/Icons/github.svg"} alt="github" width="22" height="22" />
-                    </a>
-                </span>
-
-            </span>
-            </div>
-        </Col>
+       </Col>
 
         <Col sm={12} md={8} lg={8}>
 
