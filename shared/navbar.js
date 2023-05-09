@@ -25,12 +25,12 @@ let navbar = (props) => {
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
             <Nav className="mr-auto"  activeKey={props.activeLink}>
                 <Nav.Link style={{color: props.colour}} href="/projects">Projects</Nav.Link>
-                <Nav.Link  style={{color: props.colour}} href="https://blog.jaydickson.net">Blog</Nav.Link>
-    
+                {/* <Nav.Link style={{color: props.colour}} href="https://blog.jaydickson.net">Blog</Nav.Link> */}
+                <Nav.Link style={{color: props.colour}} href="https://notes.jaydickson.net">Notes</Nav.Link>
             </Nav>
               <Nav className="justify-content-end"  activeKey={props.activeLink}>
                 <Nav.Link style={{color: props.colour}} href="/about">About</Nav.Link>
-                <Nav.Link style={{color: props.colour}} href="/login">Login</Nav.Link>
+                {/* <Nav.Link style={{color: props.colour}} href="/login">Login</Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -45,12 +45,13 @@ let navbar = (props) => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-auto"  activeKey={props.activeLink}>
             <Nav.Link  href="/projects">Projects</Nav.Link>
-            <Nav.Link  href="https://blog.jaydickson.net">Blog</Nav.Link>
+            {/* <Nav.Link  href="https://blog.jaydickson.net">Blog</Nav.Link> */}
+            <Nav.Link  href="https://notes.jaydickson.net">Notes</Nav.Link>
 
         </Nav>
           <Nav className="justify-content-end"  activeKey={props.activeLink}>
             <Nav.Link  href="/about">About</Nav.Link>
-            <Nav.Link  href="/login">Login</Nav.Link>
+            {/* <Nav.Link  href="/login">Login</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
