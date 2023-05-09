@@ -4,10 +4,6 @@ import Layout from '../shared/layout'
 
 const projects = () => {
 
-
-    let bgPic = "bg9"
-    let themeColour = "black"
-
     let projectInformation = {
         "TeaTime": {
             "description": "Countdown to your next cup of tea! Set your preffered interval between cups and wait. Never miss a warm cup of tea again!",
@@ -34,12 +30,12 @@ const projects = () => {
         }
     }
 
-    //Auto generate prject cards
+    //Auto generate project cards
     let cards = []
     for (let project in projectInformation) {
         cards.push(
             <Col sm={12} lg={4}>
-                <Card style={{ width: '100%', height: '240px', backgroundColour: 'black' }}>
+                <Card style={{ width: '100%', height: '240px'}}>
                     <Card.Body>
                         <Card.Title>{project}</Card.Title>
                         <Card.Text>
@@ -48,7 +44,6 @@ const projects = () => {
                         <Button variant="primary" target="_blank" href={projectInformation[project].link}>Go</Button>
                     </Card.Body>
                 </Card>
-                <hr style={{ backgroundColor: themeColour, margin: 22 }} />
             </Col>
         )
     }
@@ -58,8 +53,8 @@ const projects = () => {
 
         //Layout is a wrapper for the page. It handles the navbar and footer.
 
-        <Layout bg={bgPic} background='true' colour={themeColour} activeLink={'/projects'}>
-            <h1 style={{ color: themeColour }}>Projects</h1>
+        <Layout activeLink={'/projects'}>
+            <h1>Projects</h1>
             <Container>
                 <Row>
                     {cards}

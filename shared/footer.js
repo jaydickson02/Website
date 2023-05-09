@@ -1,5 +1,6 @@
 
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 let footer = (props) => {
 
@@ -9,8 +10,8 @@ let footer = (props) => {
 
     return(
     <Navbar sticky='bottom' className="justify-content-center">
-            <Navbar.Text style={{color: props.colour}}>
-            © 2022. Built by Jay Dickson.
+            <Navbar.Text>
+            © 2023. Built by Jay Dickson.
             </Navbar.Text>
     </Navbar>
     )
@@ -18,3 +19,6 @@ let footer = (props) => {
 }
 
 export default footer;
+
+
+

@@ -2,139 +2,96 @@ import { Row, Col } from 'react-bootstrap'
 import Layout from '../shared/layout'
 import React from "react";
 import Image from 'next/image'
-import Switch from '@mui/material/Switch'
-import { checkCookies, getCookie, setCookies, removeCookies } from 'cookies-next';
-
+import { Card, Button, Container } from 'react-bootstrap'
 
 class index extends React.Component {
     constructor(props) {
         super(props)
         this.myRef = React.createRef()
-
-        //Set Dark and Lighmode pics
-        this.DarkPic = "bg15";
-        this.LightPic = "bg16";
-
-        this.state = {
-            iconColour: 'white', //Icon sizes of 48 should work for the black versions
-            themeColour: 'black',
-            bgPic: this.LightPic,
-            darkmode: "light",
-            check: false
-        };
-    }
-
-    darkmode(mode) {
-        if (mode == 'dark') {
-
-            this.setState({ //Dark Mode Settings
-                iconColour: 'white',
-                themeColour: 'white',
-                bgPic: this.DarkPic,
-                darkmode: 'dark',
-                check: true
-            })
-
-            setCookies('darkmode', 'dark');
-
-        } else if (mode == 'light') {
-
-            this.setState({ //Light Mode Settings
-                iconColour: 'black',
-                themeColour: 'black',
-                bgPic: this.LightPic,
-                darkmode: 'light',
-                check: false
-            })
-
-            setCookies('darkmode', 'light');
-        }
-    }
-
-    componentDidMount() {
-
-        //Cookies for darkmode/lightmode
-
-        //Check for a cookie, make one if none exist
-        if (!checkCookies('darkmode')) {
-            setCookies('darkmode', 'light')
-        }
-
-        //Set darkmode based on cookie before page load
-        if (getCookie('darkmode') == 'dark') {
-
-            this.setState({ //Dark Mode Settings
-                iconColour: 'white',
-                themeColour: 'white',
-                bgPic: this.DarkPic,
-                darkmode: 'dark',
-                check: true
-            })
-
-        } else if (getCookie('darkmode') == 'light') { //lightmode
-
-            this.setState({ //Light Mode Settings
-                iconColour: 'black',
-                themeColour: 'black',
-                bgPic: this.LightPic,
-                darkmode: 'light',
-                check: false
-            })
-        }
     }
 
     render() {
 
-        //Swap darkmode to the opposite of the current value
-        let darkswap = () => {
-            if (this.state.darkmode == 'dark') {
-                this.darkmode('light')
-
-            } else {
-                this.darkmode('dark')
+            let projectInformation = {
+                "TeaTime": {
+                    "description": "Countdown to your next cup of tea! Set your preffered interval between cups and wait. Never miss a warm cup of tea again!",
+                    "link": "https://jaydickson02.github.io/TeaTime/"
+                },
+                "Visual PI": {
+                    "description": "A way to visulise PI geometrically. Using polygons to get increasingly accurate estimates for pi.",
+                    "link": "https://jaydickson02.github.io/visualPi"
+                },
+                "Maze": {
+                    "description": "An automatically generating maze built in P5.js based upon Prims Algorithm. Nothing fancy. But pretty cool to watch.",
+                    "link": "https://jaydickson02.github.io/Maze/"
+                },
+                "Find the Target": {
+                    "description": "Genetic Algorithm that attempts to make its way to the goal. It has to get around an obstacle to do so.",
+                    "link": "https://jaydickson02.github.io/FindTheTarget"
+                },
+                "MineSweeper": {
+                    "description": "The classic game Minesweeper. Built with P5.js.",
+                    "link": "https://jaydickson02.github.io/Minesweeper/"
+                },
+                "Orbits": {
+                    "description": "A simulation of the earth with a set of satellites orbiting.",
+                    "link": "https://jaydickson02.github.io/Orbits/"
+                }
 
             }
-        }
+        
+            //Auto generate project cards
+            let cards = []
+            for (let project in projectInformation) {
+                cards.push(
+                    <Col sm={12} lg={4}>
+                        <Card style={{ width: '100%', height: '240px'}}>
+                            <Card.Body>
+                                <Card.Title>{project}</Card.Title>
+                                <Card.Text>
+                                    {projectInformation[project].description}
+                                </Card.Text>
+                                <Button variant="primary" target="_blank" href={projectInformation[project].link}>Go</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                )
+            }
 
         return (
 
-            <Layout footer='false' bg={this.state.bgPic} background='true' colour={this.state.themeColour} activeLink={'/'}>
+            <Layout activeLink={'/'}>
 
-                <hr style={{ backgroundColor: this.state.themeColour, margin: 0, marginLeft: 22, marginRight: 22 }} />
+                {/* <hr style={{margin: 0, marginLeft: 22, marginRight: 22 }} /> */}
+
+                <Container>
+                <Row>
+                    {cards}
+                </Row>
+                </Container>
 
                 <Row>
                     <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', padding: '22px', textAlign: 'left' }}>
-                        <span >
+                        <span class="icons">
 
                             <span style={{ padding: '10px' }}>
                                 <a target="_blank" href="https://twitter.com/rubbergoldfsh">
-                                    <Image src={"/SM/twitterIcon-" + this.state.iconColour + ".png"} alt="twitter" width="32" height="32" />
-                                </a>
-                            </span>
-
-                            <span style={{ padding: '10px' }}>
-                                <a target="_blank" href="https://www.instagram.com/jaydickson02/">
-                                    <Image src={"/SM/instagramIcon-" + this.state.iconColour + ".png"} alt="instagram" width="32" height="32" />
+                                    <Image class="autoFilter" src={"/Icons/twitter.svg"} alt="twitter"
+                                     width="22" height="22"/>
                                 </a>
                             </span>
 
                             <span style={{ padding: '10px' }}>
                                 <a target="_blank" href="https://github.com/jaydickson02">
-                                    <Image src={"/SM/githubIcon-" + this.state.iconColour + ".png"} alt="github" width="32" height="32" />
+                                    <Image class="autoFilter" src={"/Icons/github.svg"} alt="github" width="22" height="22" />
                                 </a>
                             </span>
 
+
                         </span>
                     </Col>
-                    <Col xs={4} sm={4} lg={6} style={{ width: '100%', marginTop: '0%', padding: '22px' }}>
-                        <div style={{ display: 'flex', alignItems: 'right', justifyContent: 'right' }}>
-                            <Switch
-                                checked={this.state.check}
-                                size="large"
-                                onChange={darkswap}
-                            />
-                        </div>
-                    </Col>
+
+                    
 
                 </Row>
 
