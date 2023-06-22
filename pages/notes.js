@@ -1,5 +1,5 @@
 import { Container, Alert, Row, Col } from 'react-bootstrap'
-import Layout from '../shared/layout'
+import Layout from '../components/layout'
 
 const notes = () => {
 

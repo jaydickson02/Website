@@ -1,12 +1,12 @@
 
 import { Card, Button, Container, Row, Col } from 'react-bootstrap'
-import Layout from '../shared/layout'
+import Layout from '../components/layout'
 
 const projects = () => {
 
     let projectInformation = {
         "TeaTime": {
-            "description": "Countdown to your next cup of tea! Set your preffered interval between cups and wait. Never miss a warm cup of tea again!",
+            "description": "Countdown to your next cup of tea! Set your prefered interval between cups and wait. Never miss a warm cup of tea again!",
             "link": "https://jaydickson02.github.io/TeaTime/"
         },
         "Visual PI": {
