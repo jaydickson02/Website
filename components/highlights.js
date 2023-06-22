@@ -61,7 +61,7 @@ export default function Highlights() {
         <div class="grid grid-cols-3 lg:gap-4 sm:gap-2 w-full">
             <div class="flex items-center justify-center">
             <span class="inline-block rounded-xl bg-gray-50 h-16 w-16 p-1 flex justify-center items-center">
-                <Image src="/storeLogo.png" alt="Accented Apparel" width={1024} height={1024} priority/>
+                <Image src="/StoreLogo.png" alt="Accented Apparel" width={1024} height={1024} priority/>
             </span>
             </div>
             <div class="col-span-2">
