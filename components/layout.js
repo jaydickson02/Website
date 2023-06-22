@@ -30,7 +30,7 @@ let layout = (props) => {
     return (
         <div>
             <Head />
-            <div class="mainContainer" style={{ minHeight: '100vh', position: 'relative' }}>
+            <div class="md:pl-20 md:pr-20">
                 <Navbar activeLink={props.activeLink} />
                 {props.children}
                 <Footer render={props.footer}/>

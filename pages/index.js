@@ -86,7 +86,7 @@ class index extends React.Component {
 
                 <Highlights />
 
-                <div class="mt-10">
+                <div class="mt-10 p-4">
                 <Row>
                     {/* <NewCard /> */}
                     {cards}
