@@ -33,7 +33,7 @@ const about = () => {
                 <Image class="rounded-3xl transform -rotate-3 scale-75" src={"/aboutImages/jay-dickson.webp"} alt="Profile" width="360px" height="450px" />
                 <Image class="rounded-3xl transform rotate-3 scale-75" src={"/aboutImages/cook-jay.webp"} alt="Profile" width="360px" height="450px" />
                 <Image class="rounded-3xl transform -rotate-3 scale-75" src={"/aboutImages/run-jay.webp"} alt="Profile" width="360px" height="450px" />
-                <Image class="rounded-3xl transform rotate-3 scale-75" src={"/aboutImages/lm-jay.webp"} alt="Profile" width="360px" height="450px" />
+                <Image class="rounded-3xl transform rotate-3 scale-75" src={"/aboutImages/lm-jay.webp"} alt="Profile" width="360px" height="450px" priority/>
                 <Image class="rounded-3xl transform -rotate-3 scale-75" src={"/aboutImages/wine-jay.webp"} alt="Profile" width="360px" height="450px" />
                 </div>
             </div>
