@@ -23,6 +23,7 @@ let navbar = (props) => {
 
         </Nav>
           <Nav className="justify-content-end"  activeKey={props.activeLink}>
+            <Nav.Link  href="/CV.pdf">CV</Nav.Link>
             <Nav.Link  href="/about">About</Nav.Link>
             {/* <Nav.Link  href="/login">Login</Nav.Link> */}
           </Nav>
