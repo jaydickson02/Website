@@ -30,5 +30,5 @@ export default function card(props){
     </p>
   </div>
   </a>
-    )
+  )
 }

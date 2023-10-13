@@ -30,7 +30,7 @@ let layout = (props) => {
     return (
         <div>
             <Head />
-            <div class="md:pl-20 md:pr-20">
+            <div class="md:pl-20 md:pr-20 xs:pr-4 xs:pl-4 sm:pr-4 sm:pl-4 lg:pr-4 lg:pl-4">
                 <Navbar activeLink={props.activeLink} />
                 {props.children}
                 <Footer render={props.footer}/>

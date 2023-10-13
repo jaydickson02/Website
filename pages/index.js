@@ -86,7 +86,7 @@ class index extends React.Component {
 
                 <Highlights />
 
-                <div class="mt-10 p-4">
+                <div class="mt-10">
                 <Row>
                     {/* <NewCard /> */}
                     {cards}
@@ -94,7 +94,7 @@ class index extends React.Component {
                 </div>
 
                 <Row>
-                    <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', textAlign: 'left' }}>
+                    <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', textAlign: 'left'}}>
                         <span class="icons">
 
                             <span style={{ padding: '10px' }}>
