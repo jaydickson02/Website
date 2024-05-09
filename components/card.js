@@ -3,7 +3,7 @@ export default function card(props){
     // Initialization for ES Users
 
     return(
-    <a href={props.link} class="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-bulletGray xs:h-96 md:h-80 mb-6 no-underline hover:no-underline transform hover:scale-105">
+    <a href={props.link} class="overflow-hidden block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-bulletGray xs:h-96 md:h-80 mb-6 no-underline hover:no-underline transform hover:scale-105">
   <div
     class="relative overflow-hidden bg-cover bg-no-repeat"
     data-te-ripple-init
