@@ -52,7 +52,7 @@ export default function Highlights() {
         
         </div>
 
-        <div>
+        {/* <div>
 
         <a
           class="block rounded-xl border-gray-100 p-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:border-gray-400 hover:ring-1 hover:ring-gray-400 dark:hover:border-gray-200 dark:hover:ring-1 dark:hover:ring-gray-200 focus:outline-none focus:ring h-42 dark:bg-bulletGray no-underline hover:no-underline lg:h-28 h-40 flex items-center justify-center"
@@ -74,7 +74,7 @@ export default function Highlights() {
           </div>
         </a>
 
-        </div>
+        </div> */}
 
       </div>
     </div>
