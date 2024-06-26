@@ -87,3 +87,53 @@ hr {
   padding-left: 80px;
   padding-right: 80px;
 }
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Ensure it is behind other content */
+}
+
+.shape {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  animation: shimmer 6s ease-in-out infinite;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border: none;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: none;
+  border-top: 10px solid rgba(200, 200, 200, 0.5);
+}
+
+.square {
+  background: none;
+}
+
+@keyframes shimmer {
+  0%, 25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  75%, 100% {
+      opacity: 0;
+  }
+}
+
+/* Adding JavaScript for dynamic changes */
