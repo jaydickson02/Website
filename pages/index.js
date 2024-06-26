@@ -1,19 +1,19 @@
-import { Row, Col } from 'react-bootstrap'
-import Layout from '../components/layout'
+import { Row, Col } from 'react-bootstrap';
+import Layout from '../components/layout';
 import React from "react";
-import Image from 'next/image'
+import Image from 'next/image';
 import Highlights from '../components/highlights';
 import Card from '../components/card';
 
-class index extends React.Component {
+class Index extends React.Component {
     constructor(props) {
-        super(props)
-        this.myRef = React.createRef()
+        super(props);
+        this.myRef = React.createRef();
     }
 
     render() {
-
-            let projectInformation = {
+        let projectInformation = {
+            projects: {
                 "Maze": {
                     "image": "https://i.imgur.com/0mieqFR.png",
                     "description": "An automatically generating maze built in P5.js based upon Prims Algorithm. Nothing fancy. But pretty cool to watch.",
@@ -26,7 +26,7 @@ class index extends React.Component {
                 },
                 "Visual PI": {
                     "image": "https://i.imgur.com/RHSNpCV.png",
-                    "description": "A way to visulise PI geometrically. Using polygons to get increasingly accurate estimates for pi.",
+                    "description": "A way to visualise PI geometrically. Using polygons to get increasingly accurate estimates for pi.",
                     "link": "https://jaydickson02.github.io/visualPi"
                 },
                 "Find the Target": {
@@ -34,6 +34,28 @@ class index extends React.Component {
                     "description": "Genetic Algorithm that attempts to make its way to the goal. It has to get around an obstacle to do so.",
                     "link": "https://jaydickson02.github.io/FindTheTarget"
                 },
+                "Data and Dragons": {
+                    "image": "https://i.imgur.com/6E0EKEQ.png",
+                    "description": "A Dungeons and Dragons campaign tracker and note manager. Built with React and Next.js.",
+                    "link": "https://data-and-dragons.vercel.app/"
+                },
+                "Orbits": {
+                    "image": "https://i.imgur.com/793b1zC.png",
+                    "description": "A simple simulation of circular orbits. Accelerations can be applied along track.",
+                    "link": "https://jaydickson02.github.io/Orbits/"
+                },
+                "TeaTime": {
+                    "image": "https://i.imgur.com/5mvx449.png",
+                    "description": "Countdown to your next cup of tea! Set your preferred interval between cups and wait. Never miss a warm cup of tea again! Part of a challenge to build something fun in 2 hours.",
+                    "link": "https://jaydickson02.github.io/TeaTime/"
+                },
+                "Notes": {
+                    "image": "https://i.imgur.com/P3OpDxr.png",
+                    "description": "A simple note taking app used for taking university notes and storing resources. Built with Jekyll. Work in progress!",
+                    "link": "https://jaydickson02.github.io/Notes/"
+                },
+            },
+            reports: {
                 "DQL Report": {
                     "image": "https://i.imgur.com/RriqRmd.png",
                     "description": "The Final report for my RMIT Capstone project considering Deep Q-Learning and its uses in managing satellite formations.",
@@ -64,87 +86,79 @@ class index extends React.Component {
                     "description": "Analysis of a starlink satellites orbit given ephemris data. Looks at orbital values and the effect of perturbations.",
                     "link": "/PDFs/UniversityProjects/Satellite Data Retrieval Assignment.pdf"
                 },
-                "Data and Dragons": {
-                    "image": "https://i.imgur.com/6E0EKEQ.png",
-                    "description": "A Dungeons and Dragons campaign tracker and note manager. Built with React and Next.js.",
-                    "link": "https://data-and-dragons.vercel.app/"
-                },
-                "Orbits": {
-                    "image": "https://i.imgur.com/793b1zC.png",
-                    "description": "A simple simulation of circular orbits. Accelerations can be applied along track.",
-                    "link": "https://jaydickson02.github.io/Orbits/"
-                },
-                "TeaTime": {
-                    "image": "https://i.imgur.com/5mvx449.png",
-                    "description": "Countdown to your next cup of tea! Set your prefered interval between cups and wait. Never miss a warm cup of tea again! Part of a challenge to build something fun in 2 hours.",
-                    "link": "https://jaydickson02.github.io/TeaTime/"
-                },
-                "Notes": {
-                    "image": "https://i.imgur.com/P3OpDxr.png",
-                    "description": "A simple note taking app used for taking university notes and storing resources. Built with Jekyll. Work in progress!",
-                    "link": "https://jaydickson02.github.io/Notes/"
-                },
             }
-        
-            //Auto generate project cards
-            let cards = []
-            for (let project in projectInformation) {
-                
-                let link = projectInformation[project].link
-                let description = projectInformation[project].description
-                let title = project
-                let image = projectInformation[project].image
+        };
 
-                cards.push(
-                    <Col sm={12} md={6} lg={4}>
-                        <Card title={title} description={description} link={link} image={image}/>
-                    </Col>
-                )
-            }
+        // Auto generate project cards
+        let projectCards = [];
+        for (let project in projectInformation.projects) {
+            let link = projectInformation.projects[project].link;
+            let description = projectInformation.projects[project].description;
+            let title = project;
+            let image = projectInformation.projects[project].image;
+
+            projectCards.push(
+                <Col sm={12} md={6} lg={4} key={title}>
+                    <Card title={title} description={description} link={link} image={image} />
+                </Col>
+            );
+        }
+
+        // Auto generate report cards
+        let reportCards = [];
+        for (let report in projectInformation.reports) {
+            let link = projectInformation.reports[report].link;
+            let description = projectInformation.reports[report].description;
+            let title = report;
+            let image = projectInformation.reports[report].image;
+
+            reportCards.push(
+                <Col sm={12} md={6} lg={4} key={title}>
+                    <Card title={title} description={description} link={link} image={image} />
+                </Col>
+            );
+        }
 
         return (
-
             <Layout activeLink={'/'}>
-
-                {/* <hr style={{margin: 0, marginLeft: 22, marginRight: 22 }} /> */}
-
                 <Highlights />
 
-                <div class="mt-10">
-                <Row>
-                    {/* <NewCard /> */}
-                    {cards}
-                </Row>
+                <div className="mt-10">
+                    <h2>Projects</h2>
+                    <p>Here are some of the projects I've worked on:</p>
+                    <Row>
+                        {projectCards}
+                    </Row>
+                </div>
+
+                <div className="mt-10">
+                    <h2>Reports</h2>
+                    <p>Here are some of the reports I've written:</p>
+                    <Row>
+                        {reportCards}
+                    </Row>
                 </div>
 
                 <Row>
-                    <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', textAlign: 'left'}}>
-                        <span class="icons">
-
+                    <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', textAlign: 'left' }}>
+                        <span className="icons">
                             <span style={{ padding: '10px' }}>
                                 <a target="_blank" href="https://twitter.com/rubbergoldfsh">
-                                    <Image class="autoFilter" src={"/Icons/twitter.svg"} alt="twitter"
-                                     width="22" height="22"/>
+                                    <Image className="autoFilter" src={"/Icons/twitter.svg"} alt="twitter" width="22" height="22" />
                                 </a>
                             </span>
 
                             <span style={{ padding: '10px' }}>
                                 <a target="_blank" href="https://github.com/jaydickson02">
-                                    <Image class="autoFilter" src={"/Icons/github.svg"} alt="github" width="22" height="22" />
+                                    <Image className="autoFilter" src={"/Icons/github.svg"} alt="github" width="22" height="22" />
                                 </a>
                             </span>
-
-
                         </span>
                     </Col>
-
-                    
-
                 </Row>
-
             </Layout>
-        )
+        );
     }
 }
 
-export default index
+export default Index;
