@@ -11,7 +11,7 @@ let footer = (props) => {
     return(
     <Navbar sticky='bottom' className="justify-content-center">
             <Navbar.Text>
-            © 2023. Built by Jay Dickson.
+            © 2024. Built by Jay Dickson.
             </Navbar.Text>
     </Navbar>
     )
