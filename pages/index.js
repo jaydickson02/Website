@@ -50,15 +50,15 @@ const projectInformation = {
         },
     },
     reports: {
-        "DQL Report": {
-            "image": "https://i.imgur.com/RriqRmd.png",
+        "DQL for Trusted Satellite Operations": {
+            "image": "https://i.imgur.com/eus9jTS.png",
             "description": "The Final report for my RMIT Capstone project considering Deep Q-Learning and its uses in managing satellite formations.",
             "link": "/PDFs/UniversityProjects/Deep Q-Learning DSS.pdf"
         },
-        "DQL for Trusted Satellite Operations": {
-            "image": "https://i.imgur.com/eus9jTS.png",
-            "description": "RMIT in capstone project. Using Deep Q Learning to train a satellite formation to operate autonomously. Built with Python and Tensorflow.",
-            "link": "https://github.com/jaydickson02/Capstone"
+        "QBot 2 Automatic Navigation and Response": {
+            "image": "https://i.imgur.com/L8Tp64B.png",
+            "description": "RMIT Project where a robot was programmed to navigate a maze and respond to stimuli. This report details the design and testing of the robot.",
+            "link": "/PDFs/UniversityProjects/Autonomous Systems Report.pdf"
         },
         "Coffee Cup Sloshing": {
             "image": "https://i.imgur.com/vhJxHRy.png",
