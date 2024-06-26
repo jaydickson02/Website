@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const BackgroundPattern = () => {
     const [documentHeight, setDocumentHeight] = useState(0);
+    const [shapeElements, setShapeElements] = useState([]);
 
     useEffect(() => {
         const updateHeight = () => {
@@ -21,16 +22,31 @@ const BackgroundPattern = () => {
         };
     }, []);
 
-    const shapes = ['circle', 'triangle', 'square'];
-    const getRandomShape = () => shapes[Math.floor(Math.random() * shapes.length)];
+    useEffect(() => {
+        const shapes = ['circle', 'triangle', 'square'];
+        const getRandomShape = () => shapes[Math.floor(Math.random() * shapes.length)];
+        const getRandomDelay = () => Math.random() * 6;
 
-    const shapeElements = Array.from({ length: 500 }).map((_, index) => {
-        const shapeType = getRandomShape();
-        const top = Math.random() * documentHeight;
-        const left = Math.random() * 100;
-        const delay = Math.random() * 6; // Random delay for each shape
-        return <div key={index} className={`shape ${shapeType}`} style={{ top: `${top}px`, left: `${left}%`, animationDelay: `${delay}s` }} />;
-    });
+        const newShapeElements = Array.from({ length: 500 }).map((_, index) => {
+            const shapeType = getRandomShape();
+            const top = Math.random() * documentHeight;
+            const left = Math.random() * 100;
+            const delay = getRandomDelay();
+            return (
+                <div
+                    key={index}
+                    className={`shape ${shapeType}`}
+                    style={{
+                        top: `${top}px`,
+                        left: `${left}%`,
+                        animationDelay: `${delay}s`,
+                        animationName: 'shimmer'
+                    }}
+                />
+            );
+        });
+        setShapeElements(newShapeElements);
+    }, [documentHeight]);
 
     return (
         <div className="absolute inset-0 z-0 overflow-hidden" style={{ height: documentHeight }}>

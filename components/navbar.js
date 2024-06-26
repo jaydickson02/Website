@@ -10,7 +10,7 @@ const CustomNavbar = (props) => {
 
     return (
         <div className="navdiv">
-            <Navbar variant="dark" expand="sm" style={styles}>
+            <Navbar variant="dark" expand="sm" style={styles} >
                 <Navbar.Brand href="/">Jay Dickson</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

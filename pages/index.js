@@ -111,7 +111,7 @@ const Index = () => {
                 <Highlights />
 
                 <div className="mt-10 px-4 lg:px-16">
-                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4 dark:bg-bulletGray">
+                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                             Projects
                         </h2>
@@ -125,7 +125,7 @@ const Index = () => {
                 </div>
 
                 <div className="mt-10 px-4 lg:px-16">
-                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4 dark:bg-bulletGray">
+                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                             Reports
                         </h2>

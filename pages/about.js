@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import BackgroundPattern from '../components/backgroundPattern';
 
 const images = [
     "/aboutImages/jay-dickson.webp",
@@ -43,6 +44,7 @@ const About = () => {
 
     return (
         <Layout activeLink={'/about'}>
+            <BackgroundPattern />
             <Container className="mt-10">
                 <Row className="justify-content-center mb-4">
                     <Col xs={12} md={7} lg={6}>

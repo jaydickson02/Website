@@ -4,7 +4,7 @@ export default function Card({ link, image, title, description }) {
     return (
         <a
             href={link}
-            className="overflow-hidden block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-bulletGray xs:h-96 md:h-80 mb-6 no-underline transform transition duration-500 hover:scale-110 hover:shadow-[0_4px_30px_-3px_rgba(0,0,0,0.2),0_15px_35px_-5px_rgba(0,0,0,0.1)] group hover:no-underline"
+            className="overflow-hidden block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xs:h-96 md:h-80 mb-6 no-underline transform transition duration-500 hover:scale-110 hover:shadow-[0_4px_30px_-3px_rgba(0,0,0,0.2),0_15px_35px_-5px_rgba(0,0,0,0.1)] group hover:no-underline" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}
         >
             <div
                 className="relative overflow-hidden bg-cover bg-no-repeat h-32"
