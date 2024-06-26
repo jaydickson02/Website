@@ -18,7 +18,7 @@ export default function Highlights() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid lg:grid-cols-1 md:grid-cols-1 gap-4">
                         <div>
                             <a
                                 className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4 dark:bg-bulletGray no-underline transform transition duration-500 hover:scale-105 hover:shadow-[0_4px_30px_-3px_rgba(0,0,0,0.2),0_15px_35px_-5px_rgba(0,0,0,0.1)] hover:no-underline focus:outline-none focus:ring"
