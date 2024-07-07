@@ -18,7 +18,7 @@ let Layout = (props) => {
                 <Container>
                     <Navbar activeLink={props.activeLink} />
                 </Container>
-                <div className="px-5">
+                <div className="px-1">
                     {props.children}
                 </div>
                 <Footer />
@@ -28,7 +28,7 @@ let Layout = (props) => {
         return (
             <div>
                 <Head />
-                <div className="px-5">
+                <div className="px-1">
                     <Navbar activeLink={props.activeLink} />
                     {props.children}
                     <Footer render={props.footer} />
