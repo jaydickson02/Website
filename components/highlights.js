@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Highlights() {
     return (
         <section>
-            <div className="max-w-screen-2xl p-4 py-8 sm:py-12 lg:py-16">
+            <div className="max-w-screen-2xl mx-auto p-4 py-8 sm:py-12 lg:py-16">
                 <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
                     <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
                         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-5xl">
