@@ -1,4 +1,4 @@
-# Jay Dickson's Portfolio
+# Personal Website
 
 Welcome to the repository for my personal portfolio website. This project showcases my skills, projects, and experiences. Built using Next.js and styled with Tailwind CSS, the site is deployed on Vercel for seamless and efficient hosting.
 
