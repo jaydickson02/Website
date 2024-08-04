@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jay Dickson's Portfolio
 
-## Getting Started
+Welcome to the repository for my personal portfolio website. This project showcases my skills, projects, and experiences. Built using Next.js and styled with Tailwind CSS, the site is deployed on Vercel for seamless and efficient hosting.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This personal portfolio website is designed to provide a comprehensive overview of my professional background, skills, projects, and interests. It serves as a digital resume and a platform to connect with potential employers, collaborators, and other professionals.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Responsive Design:** Optimized for various screen sizes, ensuring a seamless experience on desktops, tablets, and mobile devices.
+- **Project Showcase:** Detailed descriptions and links to my projects, including screenshots and relevant information.
+- **Dark Mode:** Toggle between light and dark themes for a personalized viewing experience.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js:** A React framework for building fast and user-friendly web applications.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Vercel:** A platform for deployment, providing scalability and performance optimization.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/jaydickson02/Website.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Navigate to the project directory:**
+   ```bash
+   cd Website
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit `http://localhost:3000` to see the website in action.
+
+## Usage
+
+- **Development:** Use `npm run dev` to start the development server.
+- **Build:** Use `npm run build` to create an optimized production build.
+- **Start:** Use `npm start` to start the production server after building the project.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
