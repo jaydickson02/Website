@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image'
 
 export default function Card({ link, image, title, description }) {
     return (
@@ -11,10 +12,11 @@ export default function Card({ link, image, title, description }) {
                 data-te-ripple-init
                 data-te-ripple-color="light"
             >
-                <img
+                <Image
                     className="rounded-t-lg object-cover w-full h-full"
                     src={image}
                     alt={title}
+                    layout="fill"
                 />
                 <div
                     className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"

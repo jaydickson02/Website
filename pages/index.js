@@ -9,74 +9,74 @@ import BackgroundPattern from '../components/backgroundPattern';
 const projectInformation = {
     projects: {
         "Maze": {
-            "image": "https://i.imgur.com/0mieqFR.png",
+            "image": "/Project Images/Coded/Maze.png",
             "description": "An automatically generating maze built in P5.js based upon Prims Algorithm. Nothing fancy. But pretty cool to watch.",
             "link": "https://jaydickson02.github.io/Maze/"
         },
         "MineSweeper": {
-            "image": "https://i.imgur.com/L4g1g4G.png",
+            "image": "/Project Images/Coded/Minesweeper.png",
             "description": "The classic game Minesweeper. Built with P5.js.",
             "link": "https://jaydickson02.github.io/Minesweeper/"
         },
         "Visual PI": {
-            "image": "https://i.imgur.com/RHSNpCV.png",
+            "image": "/Project Images/Coded/VisualPi.png",
             "description": "A way to visualise PI geometrically. Using polygons to get increasingly accurate estimates for pi.",
             "link": "https://jaydickson02.github.io/visualPi"
         },
-        "Find the Target": {
-            "image": "https://i.imgur.com/5KEcYsS.png",
-            "description": "Genetic Algorithm that attempts to make its way to the goal. It has to get around an obstacle to do so.",
-            "link": "https://jaydickson02.github.io/FindTheTarget/"
+        "Hunting Dots": {
+            "image": "/Project Images/Coded/HuntingDots.png",
+            "description": "Genetic Algorithm that attempts to make its way to the goal. It has to get around obstacles to do so.",
+            "link": "https://jaydickson02.github.io/Hunting-Dots/"
         },
         "Data and Dragons": {
-            "image": "https://i.imgur.com/6E0EKEQ.png",
+            "image": "/Project Images/Coded/DataDragons.png",
             "description": "A Dungeons and Dragons campaign tracker and note manager. Built with React and Next.js.",
             "link": "https://data-and-dragons.vercel.app/"
         },
         "Orbits": {
-            "image": "https://i.imgur.com/793b1zC.png",
+            "image": "/Project Images/Coded/Orbits.png",
             "description": "A simple simulation of circular orbits. Accelerations can be applied along track.",
             "link": "https://jaydickson02.github.io/Orbits/"
         },
         "TeaTime": {
-            "image": "https://i.imgur.com/5mvx449.png",
+            "image": "/Project Images/Coded/TeaTime.png",
             "description": "Countdown to your next cup of tea! Set your preferred interval between cups and wait. Never miss a warm cup of tea again! Part of a challenge to build something fun in 2 hours.",
             "link": "https://jaydickson02.github.io/TeaTime/"
         },
         "Notes": {
-            "image": "https://i.imgur.com/P3OpDxr.png",
+            "image": "/Project Images/Coded/Notes.png",
             "description": "A simple note taking app used for taking university notes and storing resources. Built with Jekyll. Work in progress!",
             "link": "https://jaydickson02.github.io/Notes/"
         },
     },
     reports: {
         "DQL for Trusted Satellite Operations": {
-            "image": "https://i.imgur.com/eus9jTS.png",
+            "image": "/Project Images/Assignments/DQL.png",
             "description": "The Final report for my RMIT Capstone project considering Deep Q-Learning and its uses in managing satellite formations.",
             "link": "/PDFs/UniversityProjects/Deep Q-Learning DSS.pdf"
         },
         "QBot 2 Automatic Navigation and Response": {
-            "image": "https://i.imgur.com/L8Tp64B.png",
+            "image": "/Project Images/Assignments/Qbot.png",
             "description": "RMIT Project where a robot was programmed to navigate a maze and respond to stimuli. This report details the design and testing of the robot.",
             "link": "/PDFs/UniversityProjects/Autonomous Systems Report.pdf"
         },
         "Coffee Cup Sloshing": {
-            "image": "https://i.imgur.com/vhJxHRy.png",
+            "image": "/Project Images/Assignments/LitReview.png",
             "description": "A literature review and research proposal for a project to reduce the danger of burns due to coffee cup sloshing.",
             "link": "/PDFs/UniversityProjects/Assignment 3 Proposal.pdf"
         },
         "Martian Moons Exploration Vehicle": {
-            "image": "https://i.imgur.com/eJHe2fc.png",
+            "image": "/Project Images/Assignments/MartianMoons.png",
             "description": "A literature review into the design of a vehicle to explore the Martian moons. Written prior to a team project to design the vehicle.",
             "link": "/PDFs/UniversityProjects/Martian Moons Vehicle.pdf"
         },
         "Static and Vibrational Analysis of a U-2 Wing": {
-            "image": "https://i.imgur.com/rMZoWzG.png",
+            "image": "/Project Images/Assignments/U2.png",
             "description": "FEA Analysis of a U-2 wing using Abacus CAE.",
             "link": "/PDFs/UniversityProjects/Static Vibrational Analysis U-2 Wing.pdf"
         },
         "Satellite Data Retrieval and Analysis": {
-            "image": "https://i.imgur.com/eCaMQsd.png",
+            "image": "/Project Images/Assignments/SatelliteData.png",
             "description": "Analysis of a starlink satellites orbit given ephemris data. Looks at orbital values and the effect of perturbations.",
             "link": "/PDFs/UniversityProjects/Satellite Data Retrieval Assignment.pdf"
         },
