@@ -83,6 +83,7 @@ const About = () => {
                                     src={src}
                                     alt="Profile"
                                     layout="fill"
+                                    priority
                                 />
                             ))}
                         </div>
