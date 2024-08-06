@@ -9,6 +9,13 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
+import { Metadata } from 'next';
+ 
+export const Metadata = {
+  title: 'Jay Dickson',
+  description: "Welcome to Jay Dickson's personal website. Explore my projects and learn more about my work in aerospace engineering and software development.",
+};
+
 const Layout = (props) => {
     if (props.structure === false) {
         return (

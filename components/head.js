@@ -5,8 +5,7 @@ let head = () => {
     return (
         <div>
             <head>
-            <title>Jay Dickson</title>
-            <meta name="description" content="Welcome to Jay Dickson's personal website. Explore my projects and learn more about my work in aerospace engineering and software development." />
+
             </head>
 
             {/* Google Analytics */}
