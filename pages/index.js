@@ -1,4 +1,3 @@
-import { Row, Col } from 'react-bootstrap';
 import Layout from '../components/layout';
 import React from 'react';
 import Image from 'next/image';
@@ -88,9 +87,9 @@ const Index = () => {
     const projectCards = Object.keys(projectInformation.projects).map(project => {
         const { link, description, image } = projectInformation.projects[project];
         return (
-            <Col sm={12} md={6} lg={4} key={project}>
+            <div className="w-full md:w-1/2 lg:w-1/3 p-2.5" key={project}>
                 <Card title={project} description={description} link={link} image={image} />
-            </Col>
+            </div>
         );
     });
 
@@ -98,20 +97,20 @@ const Index = () => {
     const reportCards = Object.keys(projectInformation.reports).map(report => {
         const { link, description, image } = projectInformation.reports[report];
         return (
-            <Col sm={12} md={6} lg={4} key={report}>
+            <div className="w-full md:w-1/2 lg:w-1/3 p-2.5" key={report}>
                 <Card title={report} description={description} link={link} image={image} />
-            </Col>
+            </div>
         );
     });
 
     return (
         <Layout activeLink={'/'}>
             <BackgroundPattern />
-            <div className="relative z-10">
+            <div className="relative">
                 <Highlights />
 
-                <div className="mt-10 px-4 lg:px-16">
-                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
+                <div className="container mx-auto mt-10">
+                    <div className="block rounded-xl shadow-lg p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                             Projects
                         </h2>
@@ -119,13 +118,13 @@ const Index = () => {
                             Explore a selection of my personal projects, each designed to showcase various programming skills and creativity. From classic games to unique simulations, these projects highlight my journey through learning and experimentation.
                         </p>
                     </div>
-                    <Row className="mt-6">
+                    <div className="flex flex-wrap mt-6">
                         {projectCards}
-                    </Row>
+                    </div>
                 </div>
 
-                <div className="mt-10 px-4 lg:px-16">
-                    <div className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
+                <div className="container mx-auto mt-10">
+                    <div className="block rounded-xl shadow-lg p-4" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}>
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                             Reports
                         </h2>
@@ -133,28 +132,36 @@ const Index = () => {
                             Dive into detailed reports on various academic and professional research topics. These documents reflect my thorough investigations and findings in areas like satellite formations, computational algorithms, and aerospace engineering analyses.
                         </p>
                     </div>
-                    <Row className="mt-6">
+                    <div className="flex flex-wrap mt-6">
                         {reportCards}
-                    </Row>
+                    </div>
                 </div>
 
-                <Row className="mt-10">
-                    <Col xs={8} sm={8} lg={6} style={{ width: '100%', marginTop: '0%', textAlign: 'left' }}>
-                        <span className="icons">
-                            <span style={{ padding: '10px' }}>
-                                <a target="_blank" href="https://twitter.com/rubbergoldfsh" aria-label="Twitter">
-                                    <Image className="autoFilter" src={"/Icons/twitter.svg"} alt="Twitter" width="22" height="22" />
-                                </a>
-                            </span>
+                <div className="container ml-10 mt-10 flex justify-start">
+                <div className="flex space-x-4">
+            <a target="_blank" href="https://twitter.com/rubbergoldfsh" aria-label="Twitter" rel="noopener noreferrer">
+                <Image 
+                    className="autoFilter" 
+                    src="/Icons/twitter.svg" 
+                    alt="Twitter" 
+                    width="22" 
+                    height="22" 
+                    priority 
+                />
+            </a>
+            <a target="_blank" href="https://github.com/jaydickson02" aria-label="GitHub" rel="noopener noreferrer">
+                <Image 
+                    className="autoFilter" 
+                    src="/Icons/github.svg" 
+                    alt="GitHub" 
+                    width="22" 
+                    height="22" 
+                    priority 
+                />
+            </a>
+        </div>
 
-                            <span style={{ padding: '10px' }}>
-                                <a target="_blank" href="https://github.com/jaydickson02" aria-label="GitHub">
-                                    <Image className="autoFilter" src={"/Icons/github.svg"} alt="GitHub" width="22" height="22" />
-                                </a>
-                            </span>
-                        </span>
-                    </Col>
-                </Row>
+                </div>
             </div>
         </Layout>
     );

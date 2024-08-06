@@ -100,9 +100,11 @@ hr {
   position: absolute;
   width: 10px;
   height: 10px;
-  opacity: 0;
-  animation: shimmer 6s ease-in-out infinite;
   border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.shimmer {
+  animation: shimmer 6s infinite;
 }
 
 .circle {
@@ -125,15 +127,16 @@ hr {
 }
 
 @keyframes shimmer {
-  0%, 25% {
-      opacity: 0;
+  0%, 10% {
+    opacity: 0.1;
   }
-  50% {
-      opacity: 1;
+  60% {
+    opacity: 1;
   }
-  75%, 100% {
-      opacity: 0;
+  100% {
+    opacity: 0;
   }
 }
+
 
 /* Adding JavaScript for dynamic changes */

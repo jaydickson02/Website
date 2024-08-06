@@ -1,24 +1,15 @@
-
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-
-let footer = (props) => {
-
-    if(props.render == 'false'){
-        return(null)
+const Footer = (props) => {
+    if (props.render == 'false') {
+        return null;
     } else {
-
-    return(
-    <Navbar sticky='bottom' className="justify-content-center">
-            <Navbar.Text>
-            © 2024. Built by Jay Dickson.
-            </Navbar.Text>
-    </Navbar>
-    )
+        return (
+            <div className="w-full text-center py-2">
+                <p className="text-white">
+                    © 2024. Built by Jay Dickson.
+                </p>
+            </div>
+        );
     }
-}
+};
 
-export default footer;
-
-
-
+export default Footer;

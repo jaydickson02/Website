@@ -1,7 +1,6 @@
-import Layout from '../components/layout'
-import Image from 'next/image'
-import { useState, useEffect, useRef } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import Layout from '../components/layout';
+import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
 import BackgroundPattern from '../components/backgroundPattern';
 
 const images = [
@@ -45,9 +44,9 @@ const About = () => {
     return (
         <Layout activeLink={'/about'}>
             <BackgroundPattern />
-            <Container className="mt-10">
-                <Row className="justify-content-center mb-4">
-                    <Col xs={12} md={7} lg={6}>
+            <div className="">
+                <div className="flex flex-col lg:flex-row justify-center mb-8 space-x-8">
+                    <div className="lg:w-7/12 mb-4 lg:mb-16">
                         <div
                             ref={textContainerRef}
                             className="p-5 rounded-2xl shadow-lg"
@@ -55,20 +54,24 @@ const About = () => {
                         >
                             <h1 className="text-3xl font-bold mb-4">Hi, I'm Jay Dickson.</h1>
                             <p className="mb-3">
-                                I am currently a student of <strong>Aerospace Engineering at RMIT</strong>, and I couldn't be more excited about the field I've chosen to study.
+                                I am a <strong>Bachelor of Aerospace Engineering graduate from RMIT</strong>, and I couldn't be more excited about the field I've chosen to study.
                             </p>
                             <p className="mb-3">
                                 In addition to my studies, I have a deep interest in a number of other fields, including Artificial Intelligence, Space, and Economics. I believe that these areas are some of the most dynamic and exciting fields in modern society, and I am always eager to learn more about them.
                             </p>
                             <p className="mb-3">
-                                As a programmer, I have experience working with a variety of programming languages, including Python, JS, and C-Sharp as well as frameworks like React.
+                                As a programmer, I have experience working with a variety of programming languages, including Python, JavaScript, C#, SQL, Java, R, and MATLAB. I also have experience with frameworks like React, and software such as Git, Google Admin, Active Directory, and Unix.
                             </p>
                             <p className="mb-3">
-                                Currently, I am also working as a <strong>Digital Technology Officer</strong> at a Primary School, where I am responsible for overseeing the integration of technology into the classroom.
+                                Currently, I am working as a <strong>Digital Technology Officer</strong> at Saint Martin of Tours School. In this role, I oversee the integration and management of technology into classrooms, perform repairs and maintenance on devices, and set up and maintain user accounts.
                             </p>
+                            <p className="mb-3">
+                                Feel free to check out my work and connect with me.
+                            </p>
+                            
                         </div>
-                    </Col>
-                    <Col xs={12} lg={4} className="relative hidden lg:block">
+                    </div>
+                    <div className="hidden lg:block lg:w-4/12 relative">
                         <div
                             className="relative w-full h-full"
                             style={{ height: `${textContainerHeight}px` }}
@@ -83,9 +86,9 @@ const About = () => {
                                 />
                             ))}
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </Layout>
     );
 };

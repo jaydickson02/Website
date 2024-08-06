@@ -1,34 +1,33 @@
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomNavbar = (props) => {
-    const styles = {
-        paddingTop: '22px', 
-        paddingBottom: '22px',
-    };
-
+const Navbar = (props) => {
     return (
-        <div className="navdiv">
-            <Navbar variant="dark" expand="sm" style={styles} >
-                <Navbar.Brand href="/">Jay Dickson</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto" activeKey={props.activeLink}>
-                        <Nav.Link href="https://github.com/jaydickson02">GitHub</Nav.Link>
-                    </Nav>
-                    <Nav className="justify-content-end" activeKey={props.activeLink}>
-                        <Nav.Link href="/CV.pdf">Resume</Nav.Link>
-                        <Nav.Link href="/about">About</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+        <div>
+            <nav className="container mx-auto flex justify-between items-center py-6">
+                <div className="flex space-x-4">
+                    <a href="/" className="text-gray-900 dark:text-gray-100 transform transition-transform duration-200 hover:scale-105 hover:text-gray-900 dark:hover:text-gray-100">
+                        Jay Dickson
+                    </a>
+                    <a href="https://github.com/jaydickson02" className="text-gray-900 dark:text-gray-100 transform transition-transform duration-200 hover:scale-105 hover:text-gray-900 dark:hover:text-gray-100">
+                        GitHub
+                    </a>
+                </div>
+                <div className="flex space-x-4">
+                    <a href="/CV.pdf" className="text-gray-900 dark:text-gray-100 transform transition-transform duration-200 hover:scale-105 hover:text-gray-900 dark:hover:text-gray-100">
+                        Resume
+                    </a>
+                    <a href="/about" className="text-gray-900 dark:text-gray-100 transform transition-transform duration-200 hover:scale-105 hover:text-gray-900 dark:hover:text-gray-100">
+                        About
+                    </a>
+                </div>
+            </nav>
         </div>
     );
 };
 
-CustomNavbar.propTypes = {
+Navbar.propTypes = {
     activeLink: PropTypes.string.isRequired,
 };
 
-export default CustomNavbar;
+export default Navbar;

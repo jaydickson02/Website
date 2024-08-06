@@ -1,6 +1,5 @@
 import Navbar from './navbar';
 import Head from './head';
-import Container from 'react-bootstrap/Container';
 import Footer from './footer';
 
 // The following import prevents a Font Awesome icon server-side rendering bug,
@@ -10,15 +9,15 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
-let Layout = (props) => {
-    if (props.structure == false) {
+const Layout = (props) => {
+    if (props.structure === false) {
         return (
             <div>
                 <Head />
-                <Container>
+                <div className="container mx-auto">
                     <Navbar activeLink={props.activeLink} />
-                </Container>
-                <div className="px-1">
+                </div>
+                <div className="px-8">
                     {props.children}
                 </div>
                 <Footer />
@@ -28,7 +27,7 @@ let Layout = (props) => {
         return (
             <div>
                 <Head />
-                <div className="px-1">
+                <div className="px-8 lg:px-48">
                     <Navbar activeLink={props.activeLink} />
                     {props.children}
                     <Footer render={props.footer} />

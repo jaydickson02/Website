@@ -1,55 +1,30 @@
 import React, { useEffect, useState } from 'react';
 
 const BackgroundPattern = () => {
-    const [documentHeight, setDocumentHeight] = useState(0);
     const [shapeElements, setShapeElements] = useState([]);
-
-    useEffect(() => {
-        const updateHeight = () => {
-            setDocumentHeight(document.documentElement.scrollHeight);
-        };
-
-        // Set initial height
-        updateHeight();
-
-        // Update height on resize and scroll
-        window.addEventListener('resize', updateHeight);
-        window.addEventListener('scroll', updateHeight);
-
-        return () => {
-            window.removeEventListener('resize', updateHeight);
-            window.removeEventListener('scroll', updateHeight);
-        };
-    }, []);
 
     useEffect(() => {
         const shapes = ['circle', 'triangle', 'square'];
         const getRandomShape = () => shapes[Math.floor(Math.random() * shapes.length)];
-        const getRandomDelay = () => Math.random() * 6;
 
-        const newShapeElements = Array.from({ length: 500 }).map((_, index) => {
-            const shapeType = getRandomShape();
-            const top = Math.random() * documentHeight;
-            const left = Math.random() * 100;
-            const delay = getRandomDelay();
+        const newShapeElements = Array.from({ length: 100 }).map((_, index) => {
             return (
                 <div
                     key={index}
-                    className={`shape ${shapeType}`}
+                    className={`shape ${getRandomShape()} opacity-0 shimmer`}
                     style={{
-                        top: `${top}px`,
-                        left: `${left}%`,
-                        animationDelay: `${delay}s`,
-                        animationName: 'shimmer'
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 6}s`,
                     }}
                 />
             );
         });
         setShapeElements(newShapeElements);
-    }, [documentHeight]);
+    }, []);
 
     return (
-        <div className="absolute inset-0 z-0 overflow-hidden" style={{ height: documentHeight }}>
+        <div className="fixed inset-0 z-[-1] overflow-hidden">
             {shapeElements}
         </div>
     );

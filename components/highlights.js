@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 export default function Highlights() {
     return (
-        <section>
-            <div className="max-w-screen-2xl mx-auto p-4 py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto">
+            <div>
                 <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
-                    <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
+                    <div className="text-center ltr:lg:text-left rtl:lg:text-right">
                         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-5xl">
                             Jay Dickson
                         </h1>
@@ -18,16 +18,16 @@ export default function Highlights() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-1 md:grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-1 lg:items-center lg:gap-x-4">
                         <div>
                             <a
                                 className="block rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] p-4 no-underline transform transition duration-500 hover:scale-105 hover:shadow-[0_4px_30px_-3px_rgba(0,0,0,0.2),0_15px_35px_-5px_rgba(0,0,0,0.1)] hover:no-underline focus:outline-none focus:ring" style={{ backgroundColor: 'var(--header-color)', color: 'var(--header-text-color)' }}
                                 href="https://github.com/jaydickson02"
                                 aria-label="GitHub"
                             >
-                                <div className="grid grid-cols-3 gap-4 w-full h-42 lg:h-28 flex items-center justify-center">
+                                <div className="grid grid-cols-3 gap-4 w-full h-42 lg:h-28 items-center justify-center">
                                     <div className="flex items-center justify-center">
-                                        <span className="inline-block rounded-xl bg-gray-50 p-1 text-gray-900 h-16 w-16 flex justify-center items-center">
+                                        <span className="flex rounded-xl bg-gray-50 p-1 text-gray-900 h-16 w-16 justify-center items-center">
                                             <FaGithub className="w-full h-full" />
                                         </span>
                                     </div>
@@ -67,6 +67,6 @@ export default function Highlights() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
